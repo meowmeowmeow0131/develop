@@ -1,0 +1,36 @@
+# Brewfile
+
+cask_args appdir: "/Applications"
+
+# ------------------------------------
+# 初期インストール
+# ------------------------------------
+tap 'homebrew/bundle'
+tap 'homebrew/core'
+tap 'homebrew/cask'
+
+# ------------------------------------
+#
+# ------------------------------------
+brew 'mas'
+brew 'mackup'
+brew 'mutagen-io/mutagen/mutagen'
+brew 'coreutils'
+
+# ------------------------------------
+#
+# ------------------------------------
+cask 'google-chrome'
+cask 'visual-studio-code'
+cask 'vagrant'
+cask 'virtualbox'
+cask 'clipy'
+cask 'appcleaner'
+cask 'sketch'
+
+# ------------------------------------
+# App Store からインストール
+# ------------------------------------
+mas 'LINE', id: 539883307
+mas 'Trello', id: 1278508951
+mas 'Keynote', id: 409183694

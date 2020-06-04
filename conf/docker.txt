@@ -1,0 +1,4 @@
+amazon/aws-cli
+mcr.microsoft.com/powershell
+wingrunr21/alpine-heroku-cli
+python

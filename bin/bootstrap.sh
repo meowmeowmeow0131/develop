@@ -15,7 +15,7 @@ target="/home/vagrant/.bashrc"
 # 対象が存在しなければ実行しない
 [ -e ${target} ] || exit 0
 
-# 以前の追記内容が存在していた場合は初期化
+# 以前の追記内容が存在している場合は初期化
 if grep '## ADD FIRST CMD ##' ${target} &> /dev/null; then
     sed -i -e "$(grep -n '## ADD FIRST CMD ##' ${target} | sed -e 's/:.*//g'),$ d" ${target}
 fi
@@ -29,11 +29,8 @@ fi
 
 ## ADD ALIAS CMD ##
 alias aws='docker run --rm -ti -v ~/app/.aws:/root/.aws -v ~/app:/aws amazon/aws-cli'
-alias heroku='docker run --rm -ti -v ~/app/.heroku:/root/.heroku -v ~/app:/heroku wingrunr21/alpine-heroku-cli'
-alias pwsh='docker run --rm -ti mcr.microsoft.com/powershell pwsh'
-
+alias heroku='docker run --rm -ti -v ~/app/.heroku:/root/.heroku -v ~/app:/app wingrunr21/alpine-heroku-cli'
+alias pwsh='docker run --rm -ti -v ~/app:/app mcr.microsoft.com/powershell pwsh'
+alias python='docker run --rm -ti -v ~/app:/app python python'
 ## END ##
 EOS
-
-# ログインスクリプト再読み込み
-. ~/.bashrc
