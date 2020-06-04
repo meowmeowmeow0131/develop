@@ -1,0 +1,23 @@
+# .gitignore
+
+# env files
+.aws/
+.heroku/
+
+# Backup files
+*~
+*.orig
+*.bak
+
+# OS dependent files
+.DS_Store
+Thumbs.db
+
+# Office specific
+~$*
+*.tmp
+
+# Vagrant specific
+.vagrant/
+*-cloudimg-console.log
+mutagen.yml.lock
