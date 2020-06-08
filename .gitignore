@@ -21,3 +21,9 @@ Thumbs.db
 .vagrant/
 *-cloudimg-console.log
 mutagen.yml.lock
+
+# temp files
+node_modules/
+log/
+tmp/
+*.code-workspace

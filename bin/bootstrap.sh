@@ -28,6 +28,21 @@ wingrunr21/alpine-heroku-cli
 python
 EOS
 
+# build docker image
+while read image; do
+    if [ ! "$(docker image ls -q ${image})" ]; then
+        docker build \
+            --tag=${image}:latest \
+            --file=$(cd $(dirname $0) && cd .. && pwd)/docker/$(echo ${image} | awk '{print substr($0, index($0, "/"))}' | cut -c 2-).dockerfile \
+            --force-rm --no-cache --rm=true . \
+            > $(cd $(dirname $0) && cd ../../ && pwd)/dockerbuild.log 2>&1
+    else
+        echo "Using ${image}"
+    fi
+done << 'EOS'
+develop/aws-shell
+EOS
+
 # initialize
 sed -i -e "$(grep -n '## CHANGE WORKDIRECTORY ##' ${target} | sed -e 's/:.*//g'),$ d" ${target}
 
@@ -40,6 +55,7 @@ fi
 
 ## ADD ALIAS CMD ##
 alias aws='docker run --rm -ti -v ~/app/.aws:/root/.aws -v ~/app:/app -w /app amazon/aws-cli'
+alias awsh='docker run --rm -ti -v ~/app/.aws:/root/.aws -v ~/app:/app -w /app develop/aws-shell'
 alias heroku='docker run --rm -ti -v ~/app/.heroku:/root/.heroku -v ~/app:/app -w /app wingrunr21/alpine-heroku-cli'
 alias pwsh='docker run --rm -ti -v ~/app:/app -w /app mcr.microsoft.com/powershell pwsh'
 alias python='docker run --rm -ti -v ~/app:/app -w /app python python'

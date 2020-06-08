@@ -34,5 +34,5 @@ Vagrant.configure('2') do |config|
   config.vm.provision :docker_compose
 
   # 初回の vagrant up のみ実行するスクリプト
-  config.vm.provision :shell, :path => "/opt/www/develop.akira.local/bin/bootstrap.sh"
+  config.vm.provision :shell, :path => "bin/bootstrap.sh"
 end
