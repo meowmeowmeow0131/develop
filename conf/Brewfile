@@ -3,14 +3,14 @@
 cask_args appdir: "/Applications"
 
 # ------------------------------------
-# 初期インストール
+# ベースアプリ
 # ------------------------------------
 tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/cask'
 
 # ------------------------------------
-#
+# CUIアプリ
 # ------------------------------------
 brew 'mas'
 brew 'mackup'
@@ -18,18 +18,20 @@ brew 'mutagen-io/mutagen/mutagen'
 brew 'coreutils'
 
 # ------------------------------------
-#
+# GUIアプリ
 # ------------------------------------
 cask 'google-chrome'
 cask 'visual-studio-code'
 cask 'vagrant'
 cask 'virtualbox'
+cask 'cyberduck'
 cask 'clipy'
 cask 'appcleaner'
 cask 'sketch'
 
 # ------------------------------------
-# App Store からインストール
+# App Store のアプリ
+# ※1度でも購入した履歴のあるアプリのみ
 # ------------------------------------
 mas 'LINE', id: 539883307
 mas 'Trello', id: 1278508951

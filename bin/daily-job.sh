@@ -13,7 +13,7 @@ echo ""
 
 # ユーザーの各種設定のバックアップ
 echo "start task, task: backup user setting"
-bash /opt/scripts/bin/Backup-UserSetting.sh
+bash $(cd $(dirname $0) && cd .. && pwd)/lib/scripts/backupUserSetting.sh
 
 if [ $? = 0 ]; then
     echo "result: OK, task: backup user setting"
@@ -26,7 +26,7 @@ fi
 
 # Homebrew のメンテナンス
 echo "start task, task: maintenance homebrew"
-bash /opt/scripts/bin/Maintenance-Homebrew.sh
+bash $(cd $(dirname $0) && cd .. && pwd)/lib/scripts/maintenanceHomebrew.sh
 
 if [ $? = 0 ]; then
     echo "result: OK, task: maintenance homebrew"

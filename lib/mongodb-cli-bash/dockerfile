@@ -1,0 +1,20 @@
+# Dockerfile for aws-shell (to backup mongodb)
+
+FROM alpine:3.7
+
+RUN apk add --no-cache \
+        coreutils \
+        bash \
+        tzdata \
+        py2-pip \
+        mongodb-tools \
+        curl \
+# install aws-cli
+ && pip install awscli \
+# set timezone JST
+ && cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
+ && apk del tzdata \
+ && rm -r /root/.cache
+
+COPY bin /opt/bin
+ENTRYPOINT ["/opt/bin/run.sh"]
