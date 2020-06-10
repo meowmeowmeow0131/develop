@@ -7,5 +7,5 @@ sync:
       vcs: true
       paths:
         - "/node_modules"
-        - "/log"
+#        - "/log"
         - "/tmp"

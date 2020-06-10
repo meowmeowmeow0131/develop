@@ -2,19 +2,21 @@
 
 FROM alpine:3.7
 
-RUN apk add --no-cache \
+RUN apk update && apk add --no-cache \
         coreutils \
         bash \
         tzdata \
         py2-pip \
         mongodb-tools \
         curl \
-# install aws-cli
- && pip install awscli \
-# set timezone JST
- && cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
- && apk del tzdata \
- && rm -r /root/.cache
+    # install aws-cli
+    && pip install awscli \
+    # set timezone JST
+    && cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
+    # remove package, cache
+    && apk del build-deps \
+    && rm -rf /var/cache/apk/* \
+    && rm -rf /tmp/*
 
 COPY bin /opt/bin
 ENTRYPOINT ["/opt/bin/run.sh"]

@@ -29,7 +29,7 @@ python
 EOS
 
 # build docker image
-bash $(cd $(dirname $0) && cd .. && pwd)/scripts/buildDockerImage.sh
+bash $(cd $(dirname $0) && cd .. && pwd)/lib/scripts/buildDockerImage.sh
 
 # initialize
 sed -i -e "$(grep -n '## CHANGE WORKDIRECTORY ##' ${target} | sed -e 's/:.*//g'),$ d" ${target}
@@ -44,6 +44,7 @@ fi
 ## ADD ALIAS CMD ##
 alias aws='docker run --rm -ti -v ~/app/.aws:/root/.aws -v ~/app:/app -w /app amazon/aws-cli'
 alias awsh='docker run --rm -ti -v ~/app/.aws:/root/.aws -v ~/app:/app -w /app develop/aws-shell'
+alias sam='docker run --rm -ti -v ~/app/.aws:/root/.aws -v $(pwd):/app -v /var/run/docker.sock:/var/run/docker.sock -w /app -p "3000:3000" develop/aws-sam'
 alias heroku='docker run --rm -ti -v ~/app/.heroku:/root/.heroku wingrunr21/alpine-heroku-cli'
 alias pwsh='docker run --rm -ti -v ~/app:/app -w /app mcr.microsoft.com/powershell pwsh'
 alias python='docker run --rm -ti -v ~/app:/app -w /app python python'

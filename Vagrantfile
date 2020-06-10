@@ -27,7 +27,7 @@ Vagrant.configure('2') do |config|
   # 起動時のみフォルダ同期を行う
   config.vm.synced_folder './', '/home/vagrant/app', type: "rsync",
     rsync_auto: true,
-    rsync__exclude: ['.git/', 'node_modules/', 'log/', 'tmp/']
+    rsync__exclude: ['.git/', 'node_modules/', 'tmp/']
 
   # ゲストマシンにインストールするパッケージ
   config.vm.provision :docker, run: 'always'
