@@ -50,3 +50,5 @@ alias pwsh='docker run --rm -ti -v ~/app:/app -w /app mcr.microsoft.com/powershe
 alias python='docker run --rm -ti -v ~/app:/app -w /app python python'
 ## END ##
 EOS
+
+# install nodejs

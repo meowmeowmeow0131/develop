@@ -7,4 +7,4 @@
 # ---------------------------------------------------------------------------------------------------
 set -e
 
-vagrant plugin install vagrant-disksize vagrant-hostsupdater vagrant-mutagen
+vagrant plugin install vagrant-disksize vagrant-hostsupdater vagrant-mutagen vagrant-docker-compose vagrant-vbguest
