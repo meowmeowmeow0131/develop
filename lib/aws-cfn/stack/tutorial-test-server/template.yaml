@@ -1,0 +1,122 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: tutorial test server of ec2 instance service
+
+Parameters:
+#  AvailabilityZone:
+#    Type: String
+#    Default: !Sub "${AWS::Region}a"
+  VpcId:
+    Type: String
+    Default: 'vpc-0b0cda0f5fecc40a7'
+  SubnetId:
+    Type: String
+    Default: 'subnet-0e38b4c82c1095e41'
+  EbsBlockDevice:
+    Type: String
+    Default: '/dev/xvda'
+
+Resources:
+  # create Security Group
+  #
+  # Description:
+  # ・SSHアクセスを許可
+  # ・ICMPアクセスを許可
+  EC2SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      #
+      GroupName: 'aws-sg-tutorial-test'
+      #
+      GroupDescription: launch-wizard-1 created 2020-06-17T21:30:32.672+09:00
+      #
+      VpcId: !Ref VpcId
+      #
+      SecurityGroupIngress:
+        # ssh
+        - CidrIp: 0.0.0.0/0
+          FromPort: 22
+          ToPort: 22
+          IpProtocol: tcp
+      #
+      SecurityGroupEgress: 
+        - CidrIp: 0.0.0.0/0
+          IpProtocol: '-1'
+    # 誤削ポリシーの設定
+    DeletionPolicy: Delete
+
+  # Create EC2 Instance at private subnet
+  #
+  # Description:
+  # 無料の範囲内のコンピューティング性能（AMI,インスタンスタイプ）で作成
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      # 無料枠のAMI
+      ImageId: 'ami-0c3ae97724b825432'
+      # 無料枠のインスタンスタイプ
+      InstanceType: 't2.micro'
+      # プライベート DNS
+      #PrivateDnsName: ip-10-1-100-86.ap-northeast-1.compute.internal
+      # プライベート IP アドレス
+      #PrivateIp: 10.1.100.86
+      # インスタンスを起動するサブネット
+      SubnetId: !Ref SubnetId
+      # IAMロール
+      #IamInstanceProfile:
+      # キーペアの名前
+      KeyName: 'key'
+      # 終了保護（インスタンスの休止が有効であるかどうか）
+      HibernationOptions: 
+        Configured: false
+      # 詳細モニタリングを有効にするかどうか
+      Monitoring: false
+      # インスタンスのテナンシー
+      Tenancy: 'default'
+      # CPU オプション
+      CpuOptions:
+        # CPU コアの数
+        CoreCount: 1
+        # CPU コアあたりのスレッド数
+        ThreadsPerCore: 1
+      # インスタンスのアベイラビリティーゾーン
+      AvailabilityZone: !Sub "${AWS::Region}a"
+      # セキュリティグループ
+      SecurityGroupIds: 
+        - !Ref EC2SecurityGroup
+      # Amazon EBS I/O 用に最適化されているかどうか（隠しパラメータ）
+      # ※追加料金が発生しなければ最適化する価値があるかも
+      EbsOptimized: false
+      # VPC で起動されたインスタンスが NAT を実行できるようにするかどうか（隠しパラメータ）
+      SourceDestCheck: true
+      # インスタンスで利用可能なユーザーデータ（隠しパラメータ）
+      #UserData:
+      # 起動時にインスタンスにアタッチするブロックデバイス
+      BlockDeviceMappings: 
+        - DeviceName: !Ref EbsBlockDevice
+          # EBS ボリュームを自動設定するために使用するパラメータ
+          Ebs: 
+            # ボリュームを暗号化するかどうか
+            Encrypted: false
+            # ボリュームのサイズ（GiB 単位）
+            VolumeSize: 8
+            #SnapshotId: "snap-0d1b8a2a08d961a09"
+            # ボリュームタイプ
+            VolumeType: 'gp2'
+            # インスタンス終了時に EBS ボリュームを削除するかどうか
+            DeleteOnTermination: true
+    # 誤削ポリシーの設定
+    DeletionPolicy: Delete
+    DependsOn: EC2SecurityGroup
+
+# コンソール出力情報
+Outputs:
+  EC2SecurityGroup:
+    Description: security group infomation
+    Value: !Ref EC2SecurityGroup
+    Export:
+      Name: SecurityGroup-ec2-id
+  EC2Instance:
+    Description: ec2 instance infomation
+    Value: !Ref EC2Instance
+    Export:
+      Name: test-server-ec2-id
