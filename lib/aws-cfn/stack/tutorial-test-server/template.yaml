@@ -1,70 +1,131 @@
 AWSTemplateFormatVersion: "2010-09-09"
-Description: tutorial test server of ec2 instance service
+Description:
+  無料の範囲内でEC2インスタンスを構築するためのテンプレートです。そのため、コンピューティング性能（AMI,インスタンスタイプ）は最少スペックで構成。
+  なお、サーバー種別はWebサーバーを想定しています。
 
+Metadata:
+  AWS::CloudFormation::Interface:
+    # 各種パラメータ（コンソール画面からの入力用）
+    ParameterGroups:
+      - Label:
+          default: Name Prefix
+        Parameters:
+          - CompanyPrefix
+          - PJPrefix
+      - Label:
+          default: EC2Instance Configuration
+        Parameters:
+          - KeyPairName
+          - EC2InstanceName
+          - EC2InstanceAMI
+          - EC2InstanceInstanceType
+          - EC2InstanceVolumeType
+          - EC2InstanceVolumeSize
+          - SSHAccessSourceIP
+    # 各種パラメータのエイリアス
+    ParameterLabels:
+      KeyPairName:
+        default: KeyPairName
+      EC2InstanceName:
+        default: EC2 Name
+      EC2InstanceAMI:
+        default: EC2 AMI
+      EC2InstanceInstanceType:
+        default: EC2 InstanceType
+      EC2InstanceVolumeType:
+        default: EC2 VolumeType
+      EC2InstanceVolumeSize:
+        default: EC2 VolumeSize
+      SSHAccessSourceIP:
+        default: SSH AccessSourceIP
+
+# ------------------------------------------------------------#
+# Input Parameters
+# ------------------------------------------------------------#
 Parameters:
-#  AvailabilityZone:
-#    Type: String
-#    Default: !Sub "${AWS::Region}a"
-  VpcId:
+  CompanyPrefix:
     Type: String
-    Default: 'vpc-0b0cda0f5fecc40a7'
-  SubnetId:
+  PJPrefix:
     Type: String
-    Default: 'subnet-0e38b4c82c1095e41'
-  EbsBlockDevice:
+  
+  # EC2Instance
+  KeyPairName:
+    Type: AWS::EC2::KeyPair::KeyName
+    Default: "key"
+  EC2InstanceName:
     Type: String
-    Default: '/dev/xvda'
+    Default: web
+  EC2InstanceAMI:
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
+  EC2InstanceInstanceType:
+    Type: String
+    Default: t2.micro
+  EC2InstanceVolumeType:
+    Type: String
+    Default: gp2
+  EC2InstanceVolumeSize:
+    Type: String
+    Default: 8
+  SSHAccessSourceIP:
+    Type: String
+    Default: 0.0.0.0/0
 
 Resources:
-  # create Security Group
-  #
-  # Description:
-  # ・SSHアクセスを許可
-  # ・ICMPアクセスを許可
-  EC2SecurityGroup:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      #
-      GroupName: 'aws-sg-tutorial-test'
-      #
-      GroupDescription: launch-wizard-1 created 2020-06-17T21:30:32.672+09:00
-      #
-      VpcId: !Ref VpcId
-      #
-      SecurityGroupIngress:
-        # ssh
-        - CidrIp: 0.0.0.0/0
-          FromPort: 22
-          ToPort: 22
-          IpProtocol: tcp
-      #
-      SecurityGroupEgress: 
-        - CidrIp: 0.0.0.0/0
-          IpProtocol: '-1'
-    # 誤削ポリシーの設定
-    DeletionPolicy: Delete
+# ------------------------------------------------------------#
+# IAM Role for EC2
+# ------------------------------------------------------------#
+  EC2IAMRole: 
+    Type: AWS::IAM::Role
+    Properties: 
+      RoleName: !Sub ${PJPrefix}-${EC2InstanceName}-IAMRole
+      AssumeRolePolicyDocument: 
+        Version: "2012-10-17"
+        Statement: 
+          - Effect: Allow
+            Principal: 
+              Service: 
+                - ec2.amazonaws.com
+            Action: 
+              - sts:AssumeRole
+      Path: /
+      ManagedPolicyArns: 
+        - arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM
+        - arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess
+  
+  EC2InstanceProfile: 
+    Type: AWS::IAM::InstanceProfile
+    Properties: 
+      Path: /
+      Roles: 
+        - Ref: EC2IAMRole
+      InstanceProfileName: !Sub ${PJPrefix}-${EC2InstanceName}-InstanceProfile
 
-  # Create EC2 Instance at private subnet
-  #
-  # Description:
-  # 無料の範囲内のコンピューティング性能（AMI,インスタンスタイプ）で作成
+# ------------------------------------------------------------#
+#  EC2Instance AZ:A
+# ------------------------------------------------------------#
   EC2Instance:
     Type: AWS::EC2::Instance
     Properties:
-      # 無料枠のAMI
-      ImageId: 'ami-0c3ae97724b825432'
-      # 無料枠のインスタンスタイプ
-      InstanceType: 't2.micro'
-      # プライベート DNS
-      #PrivateDnsName: ip-10-1-100-86.ap-northeast-1.compute.internal
-      # プライベート IP アドレス
-      #PrivateIp: 10.1.100.86
-      # インスタンスを起動するサブネット
-      SubnetId: !Ref SubnetId
-      # IAMロール
-      #IamInstanceProfile:
+      #DependsOn: ManagedSecurityGroup
+      #DeletionPolicy: Delete
+      Tags:
+        - Key: Name
+          Value: !Sub ${PJPrefix}-${EC2InstanceName}-01
+
+      # コンピューティング性能
+      #
+      # AMI
+      ImageId: !Ref EC2InstanceAMI
+      # インスタンスタイプ
+      InstanceType: !Ref EC2InstanceInstanceType
+
       # キーペアの名前
-      KeyName: 'key'
+      KeyName: !Ref KeyPairName
+      # インスタンスを起動するサブネット
+      SubnetId: { "Fn::ImportValue": !Sub "${CompanyPrefix}-private-subnet-a" }
+      #
+      IamInstanceProfile: !Ref EC2InstanceProfile
       # 終了保護（インスタンスの休止が有効であるかどうか）
       HibernationOptions: 
         Configured: false
@@ -72,51 +133,100 @@ Resources:
       Monitoring: false
       # インスタンスのテナンシー
       Tenancy: 'default'
-      # CPU オプション
-      CpuOptions:
-        # CPU コアの数
-        CoreCount: 1
-        # CPU コアあたりのスレッド数
-        ThreadsPerCore: 1
       # インスタンスのアベイラビリティーゾーン
-      AvailabilityZone: !Sub "${AWS::Region}a"
+      AvailabilityZone: !Sub ${AWS::Region}a
       # セキュリティグループ
-      SecurityGroupIds: 
-        - !Ref EC2SecurityGroup
-      # Amazon EBS I/O 用に最適化されているかどうか（隠しパラメータ）
-      # ※追加料金が発生しなければ最適化する価値があるかも
-      EbsOptimized: false
+      SecurityGroupIds:
+        - !Ref ManagedSecurityGroup
+        - !Ref WebSecurityGroup
+      #
+      DisableApiTermination: false
       # VPC で起動されたインスタンスが NAT を実行できるようにするかどうか（隠しパラメータ）
       SourceDestCheck: true
-      # インスタンスで利用可能なユーザーデータ（隠しパラメータ）
-      #UserData:
-      # 起動時にインスタンスにアタッチするブロックデバイス
+      
+      # EBS
+      #
+      # Amazon EBS I/O 用に最適化されているかどうか（隠しパラメータ） ※追加料金が発生しなければ最適化する価値があるかも
+      EbsOptimized: false
       BlockDeviceMappings: 
-        - DeviceName: !Ref EbsBlockDevice
-          # EBS ボリュームを自動設定するために使用するパラメータ
+        - DeviceName: /dev/xvda
+          # ルートボリューム
           Ebs: 
             # ボリュームを暗号化するかどうか
             Encrypted: false
-            # ボリュームのサイズ（GiB 単位）
-            VolumeSize: 8
-            #SnapshotId: "snap-0d1b8a2a08d961a09"
-            # ボリュームタイプ
-            VolumeType: 'gp2'
             # インスタンス終了時に EBS ボリュームを削除するかどうか
             DeleteOnTermination: true
-    # 誤削ポリシーの設定
-    DeletionPolicy: Delete
-    DependsOn: EC2SecurityGroup
+            # ボリュームタイプ
+            VolumeType: !Ref EC2InstanceVolumeType
+            # ボリュームのサイズ（GiB 単位）
+            VolumeSize: !Ref EC2InstanceVolumeSize
+      #
+      UserData: !Base64 | 
+        #! /bin/bash
+        yum update -y
 
+# ------------------------------------------------------------#
+#  SecurityGroup for Managed
+# ------------------------------------------------------------#
+  ManagedSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties: 
+      Tags:
+        - Key: Name
+          Value: !Sub ${PJPrefix}-managed-sg
+      VpcId: { "Fn::ImportValue": !Sub "${CompanyPrefix}-vpc" }
+      GroupName: !Sub ${PJPrefix}-managed-sg
+      GroupDescription: "-"
+
+      # Rule
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: !Ref SSHAccessSourceIP
+      SecurityGroupEgress: 
+        - IpProtocol: '-1'
+          CidrIp: 0.0.0.0/0
+
+# ------------------------------------------------------------#
+#  SecurityGroup for Web
+# ------------------------------------------------------------#
+  WebSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      Tags:
+        - Key: Name
+          Value: !Sub ${PJPrefix}-web-sg
+      VpcId: { "Fn::ImportValue": !Sub "${CompanyPrefix}-vpc" }
+      GroupName: !Sub ${PJPrefix}-web-sg
+      GroupDescription: "-"
+
+  # Rule
+  #WebSecurityGroupIngress: 
+  #  Type: "AWS::EC2::SecurityGroupIngress"
+  #  Properties: 
+  #    IpProtocol: tcp
+  #    FromPort: 80
+  #    ToPort: 80
+  #    SourceSecurityGroupId: !GetAtt [ GroupId ]
+  #    GroupId: !GetAtt [ WebSecurityGroup, GroupId ]
+
+# ------------------------------------------------------------#
 # コンソール出力情報
+# ------------------------------------------------------------#
 Outputs:
-  EC2SecurityGroup:
-    Description: security group infomation
-    Value: !Ref EC2SecurityGroup
-    Export:
-      Name: SecurityGroup-ec2-id
   EC2Instance:
-    Description: ec2 instance infomation
+    Description: "-"
     Value: !Ref EC2Instance
     Export:
-      Name: test-server-ec2-id
+      Name: !Sub ${PJPrefix}-${EC2InstanceName}-01
+  ManagedSecurityGroup:
+    Description: "-"
+    Value: !Ref ManagedSecurityGroup
+    Export:
+      Name: !Sub ${PJPrefix}-managed-sg
+  WebSecurityGroup:
+    Description: "-"
+    Value: !Ref WebSecurityGroup
+    Export:
+      Name: !Sub ${PJPrefix}-web-sg

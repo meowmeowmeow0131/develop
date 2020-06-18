@@ -1,0 +1,314 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description:
+  This template is for providing network environment. The availabilityzone suppose A and C.
+
+Metadata:
+  AWS::CloudFormation::Interface:
+    # 各種パラメータ（コンソール画面からの入力用）
+    ParameterGroups:
+      - Label:
+          default: Name Prefix
+        Parameters:
+          - CompanyPrefix
+          - PJPrefix
+      - Label:
+          default: Network Configuration
+        Parameters:
+          - VPCCIDR
+          - PublicSubnetACIDR
+          - PublicSubnetCCIDR
+          - PrivateSubnetACIDR
+          - PrivateSubnetCCIDR
+    # 各種パラメータのエイリアス
+    ParameterLabels:
+      VPCCidrBlock:
+        default: VPC CIDR
+      PublicSubnetACIDR:
+        default: Pubric Subnet CIDR at AvailabilityZone A
+      PublicSubnetCCIDR:
+        default: Pubric Subnet CIDR at AvailabilityZone C
+      PrivateSubnetACIDR:
+        default: Private Subnet CIDR at AvailabilityZone A
+      PrivateSubnetCCIDR:
+        default: Private Subnet CIDR at AvailabilityZone C
+
+# ------------------------------------------------------------#
+# Input Parameters
+# ------------------------------------------------------------#
+Parameters:
+  CompanyPrefix:
+    Type: String
+  PJPrefix:
+    Type: String
+
+  # VPC
+  VPCCIDR:
+    Type: String
+    Default: 10.2.0.0/16
+
+  # Subnet
+  PublicSubnetACIDR:
+    Type: String
+    Default: 10.2.10.0/24
+  PublicSubnetCCIDR:
+    Type: String
+    Default: 10.2.20.0/24
+  PrivateSubnetACIDR:
+    Type: String
+    Default: 10.2.100.0/24
+  PrivateSubnetCCIDR:
+    Type: String
+    Default: 10.2.200.0/24
+
+Resources:
+# ------------------------------------------------------------#
+# VPC
+# ------------------------------------------------------------#
+  VPC: 
+    Type: AWS::EC2::VPC
+    Properties:
+      Tags: 
+        - Key: Name
+          Value: !Sub ${CompanyPrefix}-vpc
+      CidrBlock: !Ref VPCCIDR
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      InstanceTenancy: default
+
+  # IGW
+  InternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        - Key: Name
+          Value: !Sub ${CompanyPrefix}-igw
+
+  # Attach IGW
+  InternetGatewayAttachment:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      InternetGatewayId: !Ref InternetGateway
+      VpcId: !Ref VPC
+
+# ------------------------------------------------------------#
+# Public Subnet  AZ:A
+# ------------------------------------------------------------#
+  PublicSubnetA:
+    Type: AWS::EC2::Subnet
+    Properties:
+      Tags: 
+        - Key: Name
+          Value: !Sub ${CompanyPrefix}-public-subnet-a
+      AvailabilityZone: !Sub ${AWS::Region}a
+      CidrBlock: !Ref PublicSubnetACIDR
+      VpcId: !Ref VPC
+  
+  # RouteTable
+  PublicRouteTableA:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      Tags: 
+        - Key: Name
+          Value: !Sub ${CompanyPrefix}-public-route-a
+      VpcId: !Ref VPC
+  
+  # Routing RoutTable
+  PublicRouteA:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId: !Ref PublicRouteTableA
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref InternetGateway
+  
+  # Associate Subnet, RouteTable
+  PublicSubnetARouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref PublicSubnetA
+      RouteTableId: !Ref PublicRouteTableA
+
+# ------------------------------------------------------------#
+# Public Subnet  AZ:C
+# ------------------------------------------------------------#
+  PublicSubnetC:
+    Type: AWS::EC2::Subnet
+    Properties:
+      Tags: 
+        - Key: Name
+          Value: !Sub ${CompanyPrefix}-public-subnet-c
+      AvailabilityZone: !Sub ${AWS::Region}c
+      CidrBlock: !Ref PublicSubnetCCIDR
+      VpcId: !Ref VPC
+
+  # RouteTable
+  PublicRouteTableC:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      Tags: 
+        - Key: Name
+          Value: !Sub ${CompanyPrefix}-public-route-c
+      VpcId: !Ref VPC
+
+  # Routing RoutTable
+  PublicRouteC:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId: !Ref PublicRouteTableC
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref InternetGateway
+
+  # Associate Subnet, RouteTable
+  PublicSubnetCRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref PublicSubnetC
+      RouteTableId: !Ref PublicRouteTableC
+
+# ------------------------------------------------------------#
+# Private Subnet  AZ:A
+# ------------------------------------------------------------#
+  PrivateSubnetA:
+    Type: AWS::EC2::Subnet
+    Properties:
+      Tags: 
+        - Key: Name
+          Value: !Sub ${CompanyPrefix}-private-subnet-a
+      AvailabilityZone: !Sub ${AWS::Region}a
+      CidrBlock: !Ref PrivateSubnetACIDR
+      VpcId: !Ref VPC
+  
+  # RouteTable
+  PrivateRouteTableA:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      Tags: 
+        - Key: Name
+          Value: !Sub ${CompanyPrefix}-private-route-a
+      VpcId: !Ref VPC
+  
+  # Routing RoutTable
+  PrivateRouteA:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId: !Ref PrivateRouteTableA
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref InternetGateway
+  
+  # Associate Subnet, RouteTable
+  PrivateSubnetARouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref PrivateSubnetA
+      RouteTableId: !Ref PrivateRouteTableA
+
+# ------------------------------------------------------------#
+# Private Subnet  AZ:C
+# ------------------------------------------------------------#
+  PrivateSubnetC:
+    Type: AWS::EC2::Subnet
+    Properties:
+      Tags: 
+        - Key: Name
+          Value: !Sub ${CompanyPrefix}-private-subnet-c
+      AvailabilityZone: !Sub ${AWS::Region}c
+      CidrBlock: !Ref PrivateSubnetCCIDR
+      VpcId: !Ref VPC
+
+  # RouteTable
+  PrivateRouteTableC:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      Tags: 
+        - Key: Name
+          Value: !Sub ${CompanyPrefix}-private-route-c
+      VpcId: !Ref VPC
+
+  # Routing RoutTable
+  PrivateRouteC:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId: !Ref PrivateRouteTableC
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref InternetGateway
+
+  # Associate Subnet, RouteTable
+  PrivateSubnetCRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref PrivateSubnetC
+      RouteTableId: !Ref PrivateRouteTableC
+
+# ------------------------------------------------------------#
+# コンソール出力情報
+# ------------------------------------------------------------#
+Outputs:
+  VPC:
+    Description: "-"
+    Value: !Ref VPC
+    Export:
+      Name: !Sub ${CompanyPrefix}-vpc
+  VPCCIDR:
+    Description: "-"
+    Value: !Ref VPCCIDR
+    Export:
+      Name: !Sub ${CompanyPrefix}-vpc-cidr
+  PublicSubnetA:
+    Description: "-"
+    Value: !Ref PublicSubnetA
+    Export:
+      Name: !Sub ${CompanyPrefix}-public-subnet-a
+  PublicSubnetACIDR:
+    Description: "-"
+    Value: !Ref PublicSubnetACIDR
+    Export:
+      Name: !Sub ${CompanyPrefix}-public-subnet-a-cidr
+  PublicSubnetC:
+    Description: "-"
+    Value: PublicSubnetC
+    Export:
+      Name: !Sub ${CompanyPrefix}-public-subnet-c
+  PublicSubnetCCIDR:
+    Description: "-"
+    Value: !Ref PublicSubnetCCIDR
+    Export:
+      Name: !Sub ${CompanyPrefix}-public-subnet-c-cidr
+  PrivateSubnetA:
+    Description: "-"
+    Value: !Ref PrivateSubnetA
+    Export:
+      Name: !Sub ${CompanyPrefix}-private-subnet-a
+  PrivateSubnetACIDR:
+    Description: "-"
+    Value: !Ref PrivateSubnetACIDR
+    Export:
+      Name: !Sub ${CompanyPrefix}-private-subnet-a-cidr
+  PrivateSubnetC:
+    Description: "-"
+    Value: !Ref PrivateSubnetC
+    Export:
+      Name: !Sub ${CompanyPrefix}-private-subnet-c
+  PrivateSubnetCCIDR:
+    Description: "-"
+    Value: !Ref PrivateSubnetCCIDR
+    Export:
+      Name: !Sub ${CompanyPrefix}-private-subnet-c-cidr
+  PublicRouteTableA:
+    Description: "-"
+    Value: !Ref PublicRouteTableA
+    Export:
+      Name: !Sub ${CompanyPrefix}-public-route-a
+  PublicRouteTableC:
+    Description: "-"
+    Value: !Ref PublicRouteTableC
+    Export:
+      Name: !Sub ${CompanyPrefix}-public-route-c
+  PrivateRouteTableA:
+    Description: "-"
+    Value: !Ref PrivateRouteTableA
+    Export:
+      Name: !Sub ${CompanyPrefix}-private-route-a
+  PrivateRouteTableC:
+    Description: "-"
+    Value: !Ref PrivateRouteTableC
+    Export:
+      Name: !Sub ${CompanyPrefix}-private-route-c
