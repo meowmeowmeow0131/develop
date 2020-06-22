@@ -1,0 +1,61 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'cloudwatch-alarm-to-slack-python
+
+  Sample SAM Template for cloudwatch-alarm-to-slack-python
+
+  '
+Globals:
+  Function:
+    Timeout: 3
+    Environment:
+      Variables:
+        TZ: Asia/Tokyo
+        STAGE: PROD
+        SLACK_CHANNEL: aws-cloudwatch-alarm
+        ENCRYPTED_INCOMING_URL: https://hooks.slack.com/services/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
+        OK: ':ok:'
+        ALARM: ':ng:'
+        INSUFFICIENT_DATA: ':question:'
+        EXCEPTION: ':rotating_light:'
+Resources:
+  CloudwatchAlarmTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: cloudwatch-alarm-to-slack
+      DisplayName: cloudwatch-alarm-to-slack
+  CloudwatchAlarmFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: cloudwatch-alarm-to-slack
+      CodeUri: s3://akira0131-sam-bucket/cloudwatch-alarm-to-slack-python/b2c31644eb00b1201324376f39985bc7
+      Handler: app.lambda_handler
+      Runtime: python3.7
+      Events:
+        Alarm:
+          Type: SNS
+          Properties:
+            Topic:
+              Ref: CloudwatchAlarmTopic
+  ApiCountAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      Namespace: "AWS/Api\xADGateway"
+      MetricName: Count
+      Dimensions:
+      - Name: ApiName
+        Value: SampleApi
+      Period: 300
+      Statistic: Average
+      AlarmName: Sample
+      AlarmDescription: Sample
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      Threshold: 0
+      EvaluationPeriods: 1
+      TreatMissingData: notBreaching
+      OKActions:
+      - Ref: CloudwatchAlarmTopic
+      AlarmActions:
+      - Ref: CloudwatchAlarmTopic
+      InsufficientDataActions:
+      - Ref: CloudwatchAlarmTopic

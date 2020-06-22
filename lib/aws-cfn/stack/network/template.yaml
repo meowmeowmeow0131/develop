@@ -44,21 +44,16 @@ Parameters:
   # VPC
   VPCCIDR:
     Type: String
-    Default: 10.2.0.0/16
 
   # Subnet
   PublicSubnetACIDR:
     Type: String
-    Default: 10.2.10.0/24
   PublicSubnetCCIDR:
     Type: String
-    Default: 10.2.20.0/24
   PrivateSubnetACIDR:
     Type: String
-    Default: 10.2.100.0/24
   PrivateSubnetCCIDR:
     Type: String
-    Default: 10.2.200.0/24
 
 Resources:
 # ------------------------------------------------------------#

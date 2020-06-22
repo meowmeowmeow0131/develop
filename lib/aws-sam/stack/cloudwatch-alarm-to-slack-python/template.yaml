@@ -1,0 +1,70 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  cloudwatch-alarm-to-slack-python
+
+  Sample SAM Template for cloudwatch-alarm-to-slack-python
+
+Globals:
+  Function:
+    Timeout: 3
+    Environment:
+      Variables:
+        TZ: Asia/Tokyo
+        STAGE: PROD
+        # 通知先の slack チャンネル
+        SLACK_CHANNEL: aws-cloudwatch-alarm
+        # 暗号化した　Incoming Webhook URL
+        ENCRYPTED_INCOMING_URL: https://hooks.slack.com/services/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
+        # OKアラートの slack 絵文字
+        OK: ":ok:"
+        # NGアラートの slack 絵文字
+        ALARM: ":ng:"
+        # 不足アラートの slack 絵文字
+        INSUFFICIENT_DATA: ":question:"
+        # コードの例外時に通知する slack 絵文字
+        EXCEPTION: ":rotating_light:"
+
+Resources:
+  #
+  CloudwatchAlarmTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: cloudwatch-alarm-to-slack
+      DisplayName: cloudwatch-alarm-to-slack
+  #
+  CloudwatchAlarmFunction:
+    Type: AWS::Serverless::Function 
+    Properties:
+      FunctionName: cloudwatch-alarm-to-slack
+      CodeUri: src/
+      Handler: app.lambda_handler
+      Runtime: python3.7
+      Events:
+        Alarm:
+          Type: SNS
+          Properties:
+            Topic: !Ref CloudwatchAlarmTopic
+
+  ApiCountAlarm:
+    Type: AWS::CloudWatch::Alarm # https://docs.aws.amazon.com/ja_jp/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html
+    Properties:
+      Namespace: AWS/Api­Gateway
+      MetricName: Count
+      Dimensions:
+        - Name: ApiName
+          Value: SampleApi
+      Period: 300
+      Statistic: Average
+      AlarmName: Sample
+      AlarmDescription: Sample
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      Threshold: 0
+      EvaluationPeriods: 1
+      TreatMissingData: notBreaching
+      OKActions:
+        - !Ref CloudwatchAlarmTopic
+      AlarmActions:
+        - !Ref CloudwatchAlarmTopic
+      InsufficientDataActions:
+        - !Ref CloudwatchAlarmTopic

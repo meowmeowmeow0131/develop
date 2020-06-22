@@ -1,0 +1,35 @@
+{
+    "StackName": "network",
+    "Parameters": [{
+        "ParameterKey": "CompanyPrefix",
+        "ParameterValue": "ar"
+    },
+    {
+        "ParameterKey": "PJPrefix",
+        "ParameterValue": "demo"
+    },
+    {
+        "ParameterKey": "DeletionPolicy",
+        "ParameterValue": "Delete"
+    },
+    {
+        "ParameterKey": "VPCCIDR",
+        "ParameterValue": "10.2.0.0/16"
+    },
+    {
+        "ParameterKey": "PublicSubnetACIDR",
+        "ParameterValue": "10.2.10.0/24"
+    },
+    {
+        "ParameterKey": "PublicSubnetCCIDR",
+        "ParameterValue": "10.2.20.0/24"
+    },
+    {
+        "ParameterKey": "PrivateSubnetACIDR",
+        "ParameterValue": "10.2.100.0/24"
+    },
+    {
+        "ParameterKey": "PrivateSubnetCCIDR",
+        "ParameterValue": "10.2.200.0/24"
+    }]
+}
