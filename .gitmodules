@@ -1,0 +1,3 @@
+[submodule "lib/aws-cfn/stack/network-template"]
+	path = lib/aws-cfn/stack/network-template
+	url = git@github.com:meowmeowmeow0131/network-template.git
