@@ -4,3 +4,6 @@
 [submodule "lib/aws-cfn/stack/ec2-instance-web-server-template"]
 	path = lib/aws-cfn/stack/ec2-instance-web-server-template
 	url = git@github.com:meowmeowmeow0131/ec2-instance-web-server-template.git
+[submodule "lib/aws-sam/stack/cloudwatch-alarm-to-slack"]
+	path = lib/aws-sam/stack/cloudwatch-alarm-to-slack
+	url = git@github.com:meowmeowmeow0131/cloudwatch-alarm-to-slack.git
