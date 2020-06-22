@@ -7,3 +7,6 @@
 [submodule "lib/aws-sam/stack/cloudwatch-alarm-to-slack"]
 	path = lib/aws-sam/stack/cloudwatch-alarm-to-slack
 	url = git@github.com:meowmeowmeow0131/cloudwatch-alarm-to-slack.git
+[submodule "lib/aws-sam/stack/lambda-sample-python"]
+	path = lib/aws-sam/stack/lambda-sample-python
+	url = git@github.com:meowmeowmeow0131/lambda-sample-python.git
