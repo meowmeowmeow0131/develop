@@ -1,12 +1,12 @@
-[submodule "lib/aws-cfn/stack/network-template"]
-	path = lib/aws-cfn/stack/network-template
+[submodule "lib/aws-cfn/template/network-template"]
+	path = lib/aws-cfn/template/network-template
 	url = git@github.com:meowmeowmeow0131/network-template.git
-[submodule "lib/aws-cfn/stack/ec2-web-server-template"]
-	path = lib/aws-cfn/stack/ec2-web-server-template
+[submodule "lib/aws-cfn/template/ec2-web-server-template"]
+	path = lib/aws-cfn/template/ec2-web-server-template
 	url = git@github.com:meowmeowmeow0131/ec2-web-server-template.git
-[submodule "lib/aws-sam/stack/cloudwatch-alarm-to-slack"]
-	path = lib/aws-sam/stack/cloudwatch-alarm-to-slack
+[submodule "lib/aws-sam/template/cloudwatch-alarm-to-slack"]
+	path = lib/aws-sam/template/cloudwatch-alarm-to-slack
 	url = git@github.com:meowmeowmeow0131/cloudwatch-alarm-to-slack.git
-[submodule "lib/aws-sam/stack/lambda-sample-python"]
-	path = lib/aws-sam/stack/lambda-sample-python
+[submodule "lib/aws-sam/template/lambda-sample-python"]
+	path = lib/aws-sam/template/lambda-sample-python
 	url = git@github.com:meowmeowmeow0131/lambda-sample-python.git
