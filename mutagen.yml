@@ -6,5 +6,6 @@ sync:
     ignore:
       vcs: true
       paths:
+        - "/.git"
         - "/node_modules"
         - "/tmp"
