@@ -10,9 +10,9 @@
 [submodule "lib/aws-sam/template/lambda-sample-python"]
 	path = lib/aws-sam/template/lambda-sample-python
 	url = git@github.com:meowmeowmeow0131/lambda-sample-python.git
-[submodule "lib/aws-cfn/template/iam-policy-cfn-template"]
-	path = lib/aws-cfn/template/iam-policy-cfn-template
-	url = git@github.com:meowmeowmeow0131/iam-policy-cfn-template.git
+[submodule "lib/aws-cfn/template/iam-group-cfn-template"]
+	path = lib/aws-cfn/template/iam-group-cfn-template
+	url = git@github.com:meowmeowmeow0131/iam-group-cfn-template.git
 [submodule "lib/aws-cfn/template/iam-user-cfn-template"]
 	path = lib/aws-cfn/template/iam-user-cfn-template
 	url = git@github.com:meowmeowmeow0131/iam-user-cfn-template.git
