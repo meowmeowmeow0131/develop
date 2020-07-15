@@ -16,3 +16,6 @@
 [submodule "lib/aws-cfn/template/iam-user-cfn-template"]
 	path = lib/aws-cfn/template/iam-user-cfn-template
 	url = git@github.com:meowmeowmeow0131/iam-user-cfn-template.git
+[submodule "lib/aws-cfn/template/state-manager-collect-inventory-data-template"]
+	path = lib/aws-cfn/template/state-manager-collect-inventory-data-template
+	url = git@github.com:meowmeowmeow0131/state-manager-collect-inventory-data-template.git

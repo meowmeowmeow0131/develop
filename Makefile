@@ -12,12 +12,22 @@ up: ## 仮想マシンの起動、ログイン
 	vagrant ssh
 
 stop: ## 仮想マシンの停止
+	@echo 'Copyright (c) 2020-2020 AKIRA TAKEUCHI All Rights Reserved.'
+	@echo '==> stop vagrant box.'
+	@echo ''
 	vagrant halt
 
 clean: ## 仮想マシンの起動の初期化
 	@echo 'Copyright (c) 2020-2020 AKIRA TAKEUCHI All Rights Reserved.'
 	@echo '==> Initialize vagrant box.'
 	@echo ''
+
+provision: ## 仮想マシンの自動セットアップ
+	@echo 'Copyright (c) 2020-2020 AKIRA TAKEUCHI All Rights Reserved.'
+	@echo '==> Provition vagrant box.'
+	@echo ''
+	vagrant up --provision
+	vagrant ssh
 
 .PHONY: help
 help:

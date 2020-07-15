@@ -16,6 +16,7 @@ Vagrant.configure('2') do |config|
     vb.memory = 4096
     vb.customize ['modifyvm', :id, '--natdnsproxy1', 'off']
     vb.customize ['modifyvm', :id, '--natdnshostresolver1', 'off']
+    vb.customize ["setextradata", :id, "VBoxInternal/Devices/VMMDev/0/Config/GetHostTimeDisabled", 0]
   end
 
   # ゲストマシンのストレージサイズ
@@ -35,4 +36,7 @@ Vagrant.configure('2') do |config|
 
   # 初回の vagrant up のみ実行するスクリプト
   config.vm.provision :shell, :path => "bin/bootstrap.sh"
+
+  # タイムゾーン設定
+  config.vm.provision :shell, :inline => "timedatectl set-timezone Asia/Tokyo"
 end
