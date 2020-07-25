@@ -1,0 +1,21 @@
+stack name: tutorial-demo-state-manager-inventory-collect-template
+{
+    "Parameters": [
+        {
+            "ParameterKey": "CompanyPrefix",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "PJPrefix",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "Environment",
+            "NoEcho": false
+        }
+    ],
+    "Description": "collect resource data for ssm"
+}
+
+process exited with code: 0
+task is sucessful.

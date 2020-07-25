@@ -1,0 +1,302 @@
+stack name: tutorial-test-server
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: the following arguments are required: --stack-name, --change-set-name
+
+process exited with code: 252
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-tutorial-test-server-create-changeset.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-cfn/stack/tutorial-test-server:/var/opt,-w,/var/opt,amazon/aws-cli,cloudformation,create-change-set,--template-body,file://template.yaml,--capabilities,CAPABILITY_IAM
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/stack/tutorial-test-server",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 64005 22",
+    "OLDPWD": "/home/vagrant/app/lib",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 64005 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/stack/tutorial-test-server/.env",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_SAM_DOCKER_IMAGE": "amazon/aws-cli",
+    "APP_NAME": "tutorial-test-server"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-test-server
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: the following arguments are required: --change-set-name
+
+process exited with code: 252
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-tutorial-test-server-create-changeset.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-cfn/stack/tutorial-test-server:/var/opt,-w,/var/opt,amazon/aws-cli,cloudformation,create-change-set,--stack-name,tutorial-test-server,--template-body,file://template.yaml,--capabilities,CAPABILITY_IAM
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/stack/tutorial-test-server",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 64005 22",
+    "OLDPWD": "/home/vagrant/app/lib",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 64005 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/stack/tutorial-test-server/.env",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_SAM_DOCKER_IMAGE": "amazon/aws-cli",
+    "APP_NAME": "tutorial-test-server"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-test-server
+You must specify a region. You can also configure your region by running "aws configure".
+
+process exited with code: 253
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-tutorial-test-server-create-changeset.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-cfn/stack/tutorial-test-server:/var/opt,-w,/var/opt,amazon/aws-cli,cloudformation,create-change-set,--change-set-name,future-#0001,--stack-name,tutorial-test-server,--template-body,file://template.yaml,--capabilities,CAPABILITY_IAM
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/stack/tutorial-test-server",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 64005 22",
+    "OLDPWD": "/home/vagrant/app/lib",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 64005 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/stack/tutorial-test-server/.env",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_SAM_DOCKER_IMAGE": "amazon/aws-cli",
+    "APP_NAME": "tutorial-test-server"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-test-server
+
+An error occurred (ValidationError) when calling the CreateChangeSet operation: 1 validation error detected: Value 'future-#0001' at 'changeSetName' failed to satisfy constraint: Member must satisfy regular expression pattern: [a-zA-Z][-a-zA-Z0-9]*
+
+process exited with code: 254
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-tutorial-test-server-create-changeset.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-cfn/stack/tutorial-test-server:/var/opt,-w,/var/opt,amazon/aws-cli,cloudformation,create-change-set,--change-set-name,future-#0001,--stack-name,tutorial-test-server,--template-body,file://template.yaml,--capabilities,CAPABILITY_IAM,--region,ap-northeast-1
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/stack/tutorial-test-server",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 64005 22",
+    "OLDPWD": "/home/vagrant/app/lib",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 64005 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/stack/tutorial-test-server/.env",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_SAM_DOCKER_IMAGE": "amazon/aws-cli",
+    "APP_NAME": "tutorial-test-server"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-test-server
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+
+Unknown options: 0001, ticket
+
+process exited with code: 252
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-tutorial-test-server-create-changeset.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-cfn/stack/tutorial-test-server:/var/opt,-w,/var/opt,amazon/aws-cli,cloudformation,create-change-set,--change-set-name,future ticket 0001,--stack-name,tutorial-test-server,--template-body,file://template.yaml,--capabilities,CAPABILITY_IAM,--region,ap-northeast-1
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/stack/tutorial-test-server",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 64005 22",
+    "OLDPWD": "/home/vagrant/app/lib",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 64005 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/stack/tutorial-test-server/.env",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_SAM_DOCKER_IMAGE": "amazon/aws-cli",
+    "APP_NAME": "tutorial-test-server"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-test-server
+{
+    "Id": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/70571861-5df7-45e5-8c5c-0e9934e0fd90",
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-test-server/f408d8c0-b0ae-11ea-8eb1-0af1581a9dde"
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-test-server
+{
+    "Id": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/9e2cb6b4-c1ca-4924-8718-e280aab501cf",
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-test-server/f408d8c0-b0ae-11ea-8eb1-0af1581a9dde"
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-test-server
+{
+    "Id": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/dc714e1c-c9a4-4950-a3af-81a596177b8c",
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-test-server/f408d8c0-b0ae-11ea-8eb1-0af1581a9dde"
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-test-server
+{
+    "Id": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/979a95f8-d03b-4d4f-8265-c70c0e39ab90",
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-test-server/f408d8c0-b0ae-11ea-8eb1-0af1581a9dde"
+}
+
+process exited with code: 0
+task is sucessful.

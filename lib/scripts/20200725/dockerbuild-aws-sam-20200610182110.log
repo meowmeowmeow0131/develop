@@ -1,0 +1,190 @@
+Sending build context to Docker daemon  8.239kB
+Step 1/4 : FROM python:3.7-alpine
+ ---> 6a5ca85ed89b
+Step 2/4 : RUN apk update && apk add --no-cache --virtual build-deps         build-base         gcc         tzdata     && apk add git     && cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime     && pip install aws-sam-cli     && apk del build-deps     && rm -rf /var/cache/apk/*     && rm -rf /tmp/*
+ ---> Running in 25e163677afb
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.12/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.12/community/x86_64/APKINDEX.tar.gz
+v3.12.0-57-g76596d9eb3 [http://dl-cdn.alpinelinux.org/alpine/v3.12/main]
+v3.12.0-59-gf0047a0abb [http://dl-cdn.alpinelinux.org/alpine/v3.12/community]
+OK: 12733 distinct packages available
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.12/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.12/community/x86_64/APKINDEX.tar.gz
+(1/22) Installing libgcc (9.3.0-r2)
+(2/22) Installing libstdc++ (9.3.0-r2)
+(3/22) Installing binutils (2.34-r1)
+(4/22) Installing libmagic (5.38-r0)
+(5/22) Installing file (5.38-r0)
+(6/22) Installing gmp (6.2.0-r0)
+(7/22) Installing isl (0.18-r0)
+(8/22) Installing libgomp (9.3.0-r2)
+(9/22) Installing libatomic (9.3.0-r2)
+(10/22) Installing libgphobos (9.3.0-r2)
+(11/22) Installing mpfr4 (4.0.2-r4)
+(12/22) Installing mpc1 (1.1.0-r1)
+(13/22) Installing gcc (9.3.0-r2)
+(14/22) Installing musl-dev (1.1.24-r8)
+(15/22) Installing libc-dev (0.7.2-r3)
+(16/22) Installing g++ (9.3.0-r2)
+(17/22) Installing make (4.3-r0)
+(18/22) Installing fortify-headers (1.1-r0)
+(19/22) Installing patch (2.7.6-r6)
+(20/22) Installing build-base (0.5-r2)
+(21/22) Installing tzdata (2020a-r0)
+(22/22) Installing build-deps (20200610.182114)
+Executing busybox-1.31.1-r16.trigger
+OK: 215 MiB in 57 packages
+(1/4) Installing nghttp2-libs (1.41.0-r0)
+(2/4) Installing libcurl (7.69.1-r0)
+(3/4) Installing pcre2 (10.35-r0)
+(4/4) Installing git (2.26.2-r0)
+Executing busybox-1.31.1-r16.trigger
+OK: 230 MiB in 61 packages
+Collecting aws-sam-cli
+  Downloading aws_sam_cli-0.52.0-py3-none-any.whl (443 kB)
+Collecting click~=7.0
+  Downloading click-7.1.2-py2.py3-none-any.whl (82 kB)
+Collecting cookiecutter~=1.6.0
+  Downloading cookiecutter-1.6.0-py2.py3-none-any.whl (50 kB)
+Collecting python-dateutil<2.8.1,~=2.6
+  Downloading python_dateutil-2.8.0-py2.py3-none-any.whl (226 kB)
+Collecting docker~=4.0
+  Downloading docker-4.2.1-py2.py3-none-any.whl (143 kB)
+Collecting serverlessrepo==0.1.9
+  Downloading serverlessrepo-0.1.9-py2.py3-none-any.whl (23 kB)
+Collecting aws-lambda-builders==0.9.0
+  Downloading aws_lambda_builders-0.9.0-py3-none-any.whl (93 kB)
+Collecting requests==2.23.0
+  Downloading requests-2.23.0-py2.py3-none-any.whl (58 kB)
+Collecting Flask~=1.0.2
+  Downloading Flask-1.0.4-py2.py3-none-any.whl (92 kB)
+Collecting dateparser~=0.7
+  Downloading dateparser-0.7.5-py2.py3-none-any.whl (361 kB)
+Collecting tomlkit==0.5.8
+  Downloading tomlkit-0.5.8-py2.py3-none-any.whl (30 kB)
+Collecting PyYAML~=5.1
+  Downloading PyYAML-5.3.1.tar.gz (269 kB)
+Collecting chevron~=0.12
+  Downloading chevron-0.13.1-py3-none-any.whl (11 kB)
+Collecting aws-sam-translator==1.24.0
+  Downloading aws_sam_translator-1.24.0-py3-none-any.whl (181 kB)
+Collecting boto3>=1.13.0,~=1.13.0
+  Downloading boto3-1.13.26-py2.py3-none-any.whl (128 kB)
+Collecting jmespath~=0.9.5
+  Downloading jmespath-0.9.5-py2.py3-none-any.whl (24 kB)
+Collecting binaryornot>=0.2.0
+  Downloading binaryornot-0.4.4-py2.py3-none-any.whl (9.0 kB)
+Collecting whichcraft>=0.4.0
+  Downloading whichcraft-0.6.1-py2.py3-none-any.whl (5.2 kB)
+Collecting poyo>=0.1.0
+  Downloading poyo-0.5.0-py2.py3-none-any.whl (10 kB)
+Collecting future>=0.15.2
+  Downloading future-0.18.2.tar.gz (829 kB)
+Collecting jinja2-time>=0.1.0
+  Downloading jinja2_time-0.2.0-py2.py3-none-any.whl (6.4 kB)
+Collecting jinja2>=2.7
+  Downloading Jinja2-2.11.2-py2.py3-none-any.whl (125 kB)
+Collecting six>=1.5
+  Downloading six-1.15.0-py2.py3-none-any.whl (10 kB)
+Collecting websocket-client>=0.32.0
+  Downloading websocket_client-0.57.0-py2.py3-none-any.whl (200 kB)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.7/site-packages (from aws-lambda-builders==0.9.0->aws-sam-cli) (47.1.1)
+Requirement already satisfied: wheel in /usr/local/lib/python3.7/site-packages (from aws-lambda-builders==0.9.0->aws-sam-cli) (0.34.2)
+Collecting idna<3,>=2.5
+  Downloading idna-2.9-py2.py3-none-any.whl (58 kB)
+Collecting certifi>=2017.4.17
+  Downloading certifi-2020.4.5.2-py2.py3-none-any.whl (157 kB)
+Collecting urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1
+  Downloading urllib3-1.25.9-py2.py3-none-any.whl (126 kB)
+Collecting chardet<4,>=3.0.2
+  Downloading chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+Collecting itsdangerous>=0.24
+  Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting Werkzeug>=0.14
+  Downloading Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+Collecting tzlocal
+  Downloading tzlocal-2.1-py2.py3-none-any.whl (16 kB)
+Collecting regex!=2019.02.19
+  Downloading regex-2020.6.8.tar.gz (690 kB)
+Collecting pytz
+  Downloading pytz-2020.1-py2.py3-none-any.whl (510 kB)
+Collecting jsonschema~=3.0
+  Downloading jsonschema-3.2.0-py2.py3-none-any.whl (56 kB)
+Collecting s3transfer<0.4.0,>=0.3.0
+  Downloading s3transfer-0.3.3-py2.py3-none-any.whl (69 kB)
+Collecting botocore<1.17.0,>=1.16.26
+  Downloading botocore-1.16.26-py2.py3-none-any.whl (6.2 MB)
+Collecting arrow
+  Downloading arrow-0.15.6-py2.py3-none-any.whl (47 kB)
+Collecting MarkupSafe>=0.23
+  Downloading MarkupSafe-1.1.1.tar.gz (19 kB)
+Collecting importlib-metadata; python_version < "3.8"
+  Downloading importlib_metadata-1.6.1-py2.py3-none-any.whl (31 kB)
+Collecting pyrsistent>=0.14.0
+  Downloading pyrsistent-0.16.0.tar.gz (108 kB)
+Collecting attrs>=17.4.0
+  Downloading attrs-19.3.0-py2.py3-none-any.whl (39 kB)
+Collecting docutils<0.16,>=0.10
+  Downloading docutils-0.15.2-py3-none-any.whl (547 kB)
+Collecting zipp>=0.5
+  Downloading zipp-3.1.0-py3-none-any.whl (4.9 kB)
+Building wheels for collected packages: PyYAML, future, regex, MarkupSafe, pyrsistent
+  Building wheel for PyYAML (setup.py): started
+  Building wheel for PyYAML (setup.py): finished with status 'done'
+  Created wheel for PyYAML: filename=PyYAML-5.3.1-cp37-cp37m-linux_x86_64.whl size=44619 sha256=ee8e4bc1178f2a93a58029860dcd7a5d406d45b99d2652970728898979a76e5d
+  Stored in directory: /root/.cache/pip/wheels/5e/03/1e/e1e954795d6f35dfc7b637fe2277bff021303bd9570ecea653
+  Building wheel for future (setup.py): started
+  Building wheel for future (setup.py): finished with status 'done'
+  Created wheel for future: filename=future-0.18.2-py3-none-any.whl size=491058 sha256=96cd45496fdc3370f1ccca7193594032c825b83a8406a166e69ffd9aea8e4deb
+  Stored in directory: /root/.cache/pip/wheels/56/b0/fe/4410d17b32f1f0c3cf54cdfb2bc04d7b4b8f4ae377e2229ba0
+  Building wheel for regex (setup.py): started
+  Building wheel for regex (setup.py): finished with status 'done'
+  Created wheel for regex: filename=regex-2020.6.8-cp37-cp37m-linux_x86_64.whl size=285173 sha256=ca692e60b1509637b88d9388ab56cceee17167986458f1c72b7aa054ea8963bd
+  Stored in directory: /root/.cache/pip/wheels/46/f1/0b/a372e98f7103934a3573301c71b475143baf8ba6f6dffc876c
+  Building wheel for MarkupSafe (setup.py): started
+  Building wheel for MarkupSafe (setup.py): finished with status 'done'
+  Created wheel for MarkupSafe: filename=MarkupSafe-1.1.1-cp37-cp37m-linux_x86_64.whl size=17626 sha256=6bcc6be0809426de03c5a6f18cab89f92ffdcc4dc652d22e536d7766c8d52738
+  Stored in directory: /root/.cache/pip/wheels/b9/d9/ae/63bf9056b0a22b13ade9f6b9e08187c1bb71c47ef21a8c9924
+  Building wheel for pyrsistent (setup.py): started
+  Building wheel for pyrsistent (setup.py): finished with status 'done'
+  Created wheel for pyrsistent: filename=pyrsistent-0.16.0-cp37-cp37m-linux_x86_64.whl size=74780 sha256=573a2b73b57b55df327e6a017bd400ceca03e50dcc7153ca2cef7a47c9a3791f
+  Stored in directory: /root/.cache/pip/wheels/22/52/11/f0920f95c23ed7d2d0b05f2b7b2f4509e87a20cfe8ea43d987
+Successfully built PyYAML future regex MarkupSafe pyrsistent
+Installing collected packages: click, chardet, binaryornot, idna, certifi, urllib3, requests, whichcraft, poyo, future, MarkupSafe, jinja2, six, python-dateutil, arrow, jinja2-time, cookiecutter, websocket-client, docker, PyYAML, jmespath, docutils, botocore, s3transfer, boto3, serverlessrepo, aws-lambda-builders, itsdangerous, Werkzeug, Flask, pytz, tzlocal, regex, dateparser, tomlkit, chevron, zipp, importlib-metadata, pyrsistent, attrs, jsonschema, aws-sam-translator, aws-sam-cli
+Successfully installed Flask-1.0.4 MarkupSafe-1.1.1 PyYAML-5.3.1 Werkzeug-1.0.1 arrow-0.15.6 attrs-19.3.0 aws-lambda-builders-0.9.0 aws-sam-cli-0.52.0 aws-sam-translator-1.24.0 binaryornot-0.4.4 boto3-1.13.26 botocore-1.16.26 certifi-2020.4.5.2 chardet-3.0.4 chevron-0.13.1 click-7.1.2 cookiecutter-1.6.0 dateparser-0.7.5 docker-4.2.1 docutils-0.15.2 future-0.18.2 idna-2.9 importlib-metadata-1.6.1 itsdangerous-1.1.0 jinja2-2.11.2 jinja2-time-0.2.0 jmespath-0.9.5 jsonschema-3.2.0 poyo-0.5.0 pyrsistent-0.16.0 python-dateutil-2.8.0 pytz-2020.1 regex-2020.6.8 requests-2.23.0 s3transfer-0.3.3 serverlessrepo-0.1.9 six-1.15.0 tomlkit-0.5.8 tzlocal-2.1 urllib3-1.25.9 websocket-client-0.57.0 whichcraft-0.6.1 zipp-3.1.0
+(1/22) Purging build-deps (20200610.182114)
+(2/22) Purging build-base (0.5-r2)
+(3/22) Purging file (5.38-r0)
+(4/22) Purging g++ (9.3.0-r2)
+(5/22) Purging make (4.3-r0)
+(6/22) Purging libc-dev (0.7.2-r3)
+(7/22) Purging musl-dev (1.1.24-r8)
+(8/22) Purging fortify-headers (1.1-r0)
+(9/22) Purging patch (2.7.6-r6)
+(10/22) Purging gcc (9.3.0-r2)
+(11/22) Purging binutils (2.34-r1)
+(12/22) Purging libatomic (9.3.0-r2)
+(13/22) Purging libgomp (9.3.0-r2)
+(14/22) Purging libgphobos (9.3.0-r2)
+(15/22) Purging tzdata (2020a-r0)
+(16/22) Purging libstdc++ (9.3.0-r2)
+(17/22) Purging libgcc (9.3.0-r2)
+(18/22) Purging libmagic (5.38-r0)
+(19/22) Purging isl (0.18-r0)
+(20/22) Purging mpc1 (1.1.0-r1)
+(21/22) Purging mpfr4 (4.0.2-r4)
+(22/22) Purging gmp (6.2.0-r0)
+Executing busybox-1.31.1-r16.trigger
+OK: 27 MiB in 39 packages
+Removing intermediate container 25e163677afb
+ ---> a11803915fcf
+Step 3/4 : EXPOSE 3000
+ ---> Running in 7d8b7f018f5e
+Removing intermediate container 7d8b7f018f5e
+ ---> d4b83090501b
+Step 4/4 : ENTRYPOINT ["/usr/local/bin/sam"]
+ ---> Running in 3a9bd4e8dbc3
+Removing intermediate container 3a9bd4e8dbc3
+ ---> 97a71fc3759a
+Successfully built 97a71fc3759a
+Successfully tagged develop/aws-sam:latest

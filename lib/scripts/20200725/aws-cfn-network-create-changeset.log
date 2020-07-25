@@ -1,0 +1,349 @@
+stack name: network
+
+Error parsing parameter 'cli-input-json': Invalid JSON received.
+
+process exited with code: 252
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-network-create-changeset.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-cfn/stack/network:/var/opt,-w,/var/opt,amazon/aws-cli,cloudformation,create-change-set,--change-set-name,future-ticket-0001,--description,"Created by AWS CLI at 2020/06/19 10:46:12.362 JST",--template-body,file://template.yaml,--cli-input-json,demo.json,--capabilities,CAPABILITY_IAM,--region,ap-northeast-1
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/stack/network",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 63031 22",
+    "OLDPWD": "/home/vagrant/app/lib/aws-cfn/stack",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 63031 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/stack/network/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAMETER_FILE": "demo.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: network
+
+An error occurred (ValidationError) when calling the CreateChangeSet operation: Parameters: [CompanyPrefix, PJPrefix] must have values
+
+process exited with code: 254
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-network-create-changeset.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-cfn/stack/network:/var/opt,-w,/var/opt,amazon/aws-cli,cloudformation,create-change-set,--change-set-name,future-ticket-0001,--description,"Created by AWS CLI at 2020/06/19 10:53:31.033 JST",--template-body,file://template.yaml,--cli-input-json,file://demo.json,--capabilities,CAPABILITY_IAM,--region,ap-northeast-1
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/stack/network",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 63031 22",
+    "OLDPWD": "/home/vagrant/app/lib/aws-cfn/stack",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 63031 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/stack/network/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAMETER_FILE": "demo.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: network
+
+Parameter validation failed:
+Unknown parameter in Parameters[0]: "COMPANY_PREFIX", must be one of: ParameterKey, ParameterValue, UsePreviousValue, ResolvedValue
+Unknown parameter in Parameters[0]: "PJ_PREFIX", must be one of: ParameterKey, ParameterValue, UsePreviousValue, ResolvedValue
+Unknown parameter in Parameters[0]: "VPCCIDR", must be one of: ParameterKey, ParameterValue, UsePreviousValue, ResolvedValue
+Unknown parameter in Parameters[0]: "PublicSubnetACIDR", must be one of: ParameterKey, ParameterValue, UsePreviousValue, ResolvedValue
+Unknown parameter in Parameters[0]: "PublicSubnetCCIDR", must be one of: ParameterKey, ParameterValue, UsePreviousValue, ResolvedValue
+Unknown parameter in Parameters[0]: "PrivateSubnetACIDR", must be one of: ParameterKey, ParameterValue, UsePreviousValue, ResolvedValue
+Unknown parameter in Parameters[0]: "PrivateSubnetCCIDR", must be one of: ParameterKey, ParameterValue, UsePreviousValue, ResolvedValue
+
+process exited with code: 252
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-network-create-changeset.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-cfn/stack/network:/var/opt,-w,/var/opt,amazon/aws-cli,cloudformation,create-change-set,--change-set-name,future-ticket-0001,--description,"Created by AWS CLI at 2020/06/19 11:01:35.106 JST",--template-body,file://template.yaml,--cli-input-json,file://demo.json,--capabilities,CAPABILITY_IAM,--region,ap-northeast-1
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/stack/network",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 63031 22",
+    "OLDPWD": "/home/vagrant/app/lib/aws-cfn/stack",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 63031 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/stack/network/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAMETER_FILE": "demo.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: network
+
+An error occurred (ValidationError) when calling the CreateChangeSet operation: Parameters: [CompanyPrefix, PJPrefix] must have values
+
+process exited with code: 254
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-network-create-changeset.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-cfn/stack/network:/var/opt,-w,/var/opt,amazon/aws-cli,cloudformation,create-change-set,--change-set-name,future-ticket-0001,--description,"Created by AWS CLI at 2020/06/19 11:02:11.006 JST",--template-body,file://template.yaml,--cli-input-json,file://demo.json,--capabilities,CAPABILITY_IAM,--region,ap-northeast-1
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/stack/network",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 63031 22",
+    "OLDPWD": "/home/vagrant/app/lib/aws-cfn/stack",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 63031 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/stack/network/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAMETER_FILE": "demo.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: network
+
+An error occurred (ValidationError) when calling the CreateChangeSet operation: Parameters: [CompanyPrefix, PJPrefix] must have values
+
+process exited with code: 254
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-network-create-changeset.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-cfn/stack/network:/var/opt,-w,/var/opt,amazon/aws-cli,cloudformation,create-change-set,--change-set-name,future-ticket-0001,--description,"Created by AWS CLI at 2020/06/19 11:03:24.732 JST",--template-body,file://template.yaml,--cli-input-json,file://demo.json,--capabilities,CAPABILITY_IAM,--region,ap-northeast-1
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/stack/network",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 63031 22",
+    "OLDPWD": "/home/vagrant/app/lib/aws-cfn/stack",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 63031 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/stack/network/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAMETER_FILE": "demo.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: network
+
+An error occurred (ValidationError) when calling the CreateChangeSet operation: Parameters: [PublicSubnetCCIDR, CompanyPrefix, PrivateSubnetACIDR, PrivateSubnetCCIDR, VPCCIDR, PJPrefix, PublicSubnetACIDR] must have values
+
+process exited with code: 254
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-network-create-changeset.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-cfn/stack/network:/var/opt,-w,/var/opt,amazon/aws-cli,cloudformation,create-change-set,--change-set-name,future-ticket-0001,--description,"Created by AWS CLI at 2020/06/19 11:08:57.671 JST",--template-body,file://template.yaml,--cli-input-json,file://demo.json,--capabilities,CAPABILITY_IAM,--region,ap-northeast-1
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/stack/network",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 63031 22",
+    "OLDPWD": "/home/vagrant/app/lib/aws-cfn/stack",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 63031 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/stack/network/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAMETER_FILE": "demo.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: network
+{
+    "Id": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/51672d85-303f-4d70-a8f0-be6fd1b906f9",
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/network/19e38170-b17d-11ea-893e-063a64457ffa"
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: network
+{
+    "Id": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/720a9db8-15c2-4b2b-ba14-28d1395455a2",
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/network/19e38170-b17d-11ea-893e-063a64457ffa"
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: network
+{
+    "Id": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/5cae0948-c278-48fa-9195-dc4609c60b6d",
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/network/19e38170-b17d-11ea-893e-063a64457ffa"
+}
+
+process exited with code: 0
+task is sucessful.

@@ -3,6 +3,7 @@
 # env files
 .aws/
 .heroku/
+.ssh/
 
 # Backup files
 *~

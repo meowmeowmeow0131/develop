@@ -1,0 +1,12 @@
+stack name: tutorial-demo-ec2-web-server-template
+{
+    "Id": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/505a7868-d171-4e3e-a4df-0fde607b8e3a",
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a"
+}
+
+stack name: tutorial-demo-ec2-web-server-template
+process exited with code: 0
+stack name: tutorial-demo-ec2-web-server-template
+task is sucessful.
+process exited with code: 0
+task is sucessful.

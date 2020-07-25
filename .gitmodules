@@ -19,3 +19,15 @@
 [submodule "lib/aws-cfn/template/state-manager-collect-inventory-data-template"]
 	path = lib/aws-cfn/template/state-manager-collect-inventory-data-template
 	url = git@github.com:meowmeowmeow0131/state-manager-collect-inventory-data-template.git
+[submodule "lib/aws-sam/template/ec2-asg-auto-healing-template"]
+	path = lib/aws-sam/template/ec2-asg-auto-healing-template
+	url = git@github.com:meowmeowmeow0131/ec2-asg-auto-healing-template.git
+[submodule "lib/aws-cfn/template/ec2-asg-auto-healing-template"]
+	path = lib/aws-cfn/template/ec2-asg-auto-healing-template
+	url = git@github.com:meowmeowmeow0131/ec2-asg-auto-healing-template.git
+[submodule "lib/aws-cfn/template/ec2-launch-template-no-spot"]
+	path = lib/aws-cfn/template/ec2-launch-template-no-spot
+	url = git@github.com:meowmeowmeow0131/ec2-launch-template-no-spot.git
+[submodule "lib/aws-cfn/template/ec2-instance-by-launch-template"]
+	path = lib/aws-cfn/template/ec2-instance-by-launch-template
+	url = git@github.com:meowmeowmeow0131/ec2-instance-by-launch-template.git

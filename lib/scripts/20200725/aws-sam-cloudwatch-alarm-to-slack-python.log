@@ -1,0 +1,852 @@
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+Usage: sam init [OPTIONS]
+Try 'sam init -h' for help.
+
+Error: no such option: --region
+
+process exited with code: 2
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-sam-cloudwatch-alarm-to-slack-python.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,/var/run/docker.sock:/var/run/docker.sock,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python:/var/opt,-w,/var/opt,-p,"3000:3000",develop/aws-sam,init,--runtime,python3.7,--name,cloudwatch-alarm-to-slack-python,--region,ap-northeast-1
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 52620 22",
+    "OLDPWD": "/home/vagrant/app",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-sam",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 52620 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-sam",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_SAM_DOCKER_IMAGE": "develop/aws-sam",
+    "RUNTIME": "python3.7"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+Which template source would you like to use?
+	1 - AWS Quick Start Templates
+	2 - Custom Template Location
+Choice: 
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+
+Cloning app templates from https://github.com/awslabs/aws-sam-cli-app-templates.git
+
+process exited with code: 0
+task is sucessful.
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+
+Cloning app templates from https://github.com/awslabs/aws-sam-cli-app-templates.git
+
+Error: An error occurred while generating this project cloudwatch-alarm-to-slack-python: Error: "cloudwatch-alarm-to-slack-python" directory already exists
+
+process exited with code: 1
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-sam-cloudwatch-alarm-to-slack-python.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,/var/run/docker.sock:/var/run/docker.sock,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-sam/stack:/var/opt,-w,/var/opt,-p,"3000:3000",-e,AWS_ACCESS_KEY_ID=AKIAZPLF46C3LE2UAXWO,-e,AWS_SECRET_ACCESS_KEY=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,-e,AWS_DEFAULT_REGION=ap-northeast-1,develop/aws-sam,init,--runtime,python3.7,--dependency-manager,pip,--app-template,hello-world,--no-interactive,--name,cloudwatch-alarm-to-slack-python
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 52620 22",
+    "OLDPWD": "/home/vagrant/app",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-sam",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 52620 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-sam",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_IAM",
+    "AWS_ACCESS_KEY_ID": "AKIAZPLF46C3LE2UAXWO",
+    "AWS_SECRET_ACCESS_KEY": "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",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_SAM_DOCKER_IMAGE": "develop/aws-sam",
+    "RUNTIME": "python3.7",
+    "DEPENDENCY_MANAGER": "pip"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+
+Cloning app templates from https://github.com/awslabs/aws-sam-cli-app-templates.git
+
+Error: An error occurred while generating this project cloudwatch-alarm-to-slack-python: Error: "cloudwatch-alarm-to-slack-python" directory already exists
+
+process exited with code: 1
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-sam-cloudwatch-alarm-to-slack-python.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,/var/run/docker.sock:/var/run/docker.sock,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python:/var/opt,-w,/var/opt,-p,"3000:3000",-e,AWS_ACCESS_KEY_ID=AKIAZPLF46C3LE2UAXWO,-e,AWS_SECRET_ACCESS_KEY=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,-e,AWS_DEFAULT_REGION=ap-northeast-1,develop/aws-sam,init,--runtime,python3.7,--dependency-manager,pip,--app-template,hello-world,--no-interactive,--name,cloudwatch-alarm-to-slack-python
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 52620 22",
+    "OLDPWD": "/home/vagrant/app",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-sam",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 52620 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-sam",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_IAM",
+    "AWS_ACCESS_KEY_ID": "AKIAZPLF46C3LE2UAXWO",
+    "AWS_SECRET_ACCESS_KEY": "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",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_SAM_DOCKER_IMAGE": "develop/aws-sam",
+    "RUNTIME": "python3.7",
+    "DEPENDENCY_MANAGER": "pip"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+
+Cloning app templates from https://github.com/awslabs/aws-sam-cli-app-templates.git
+
+Error: An error occurred while generating this project cloudwatch-alarm-to-slack-python: Error: "cloudwatch-alarm-to-slack-python" directory already exists
+
+process exited with code: 1
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-sam-cloudwatch-alarm-to-slack-python.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,/var/run/docker.sock:/var/run/docker.sock,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python:/var/opt,-w,/var/opt,-p,"3000:3000",-e,AWS_ACCESS_KEY_ID=AKIAZPLF46C3LE2UAXWO,-e,AWS_SECRET_ACCESS_KEY=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,-e,AWS_DEFAULT_REGION=ap-northeast-1,develop/aws-sam,init,--runtime,python3.7,--dependency-manager,pip,--app-template,hello-world,--no-interactive,--name,cloudwatch-alarm-to-slack-python
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 52620 22",
+    "OLDPWD": "/home/vagrant/app",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-sam",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 52620 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-sam",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_IAM",
+    "AWS_ACCESS_KEY_ID": "AKIAZPLF46C3LE2UAXWO",
+    "AWS_SECRET_ACCESS_KEY": "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",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_SAM_DOCKER_IMAGE": "develop/aws-sam",
+    "RUNTIME": "python3.7",
+    "DEPENDENCY_MANAGER": "pip"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+
+Cloning app templates from https://github.com/awslabs/aws-sam-cli-app-templates.git
+
+Error: An error occurred while generating this project cloudwatch-alarm-to-slack-python: Error: "cloudwatch-alarm-to-slack-python" directory already exists
+
+process exited with code: 1
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-sam-cloudwatch-alarm-to-slack-python.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,/var/run/docker.sock:/var/run/docker.sock,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python:/var/opt,-w,/var/opt,-p,"3000:3000",-e,AWS_ACCESS_KEY_ID=AKIAZPLF46C3LE2UAXWO,-e,AWS_SECRET_ACCESS_KEY=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,-e,AWS_DEFAULT_REGION=ap-northeast-1,develop/aws-sam,init,--runtime,python3.7,--dependency-manager,pip,--app-template,hello-world,--no-interactive,--name,cloudwatch-alarm-to-slack-python
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 52620 22",
+    "OLDPWD": "/home/vagrant/app",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-sam",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 52620 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-sam",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_IAM",
+    "AWS_ACCESS_KEY_ID": "AKIAZPLF46C3LE2UAXWO",
+    "AWS_SECRET_ACCESS_KEY": "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",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_SAM_DOCKER_IMAGE": "develop/aws-sam",
+    "RUNTIME": "python3.7",
+    "DEPENDENCY_MANAGER": "pip"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+
+Cloning app templates from https://github.com/awslabs/aws-sam-cli-app-templates.git
+
+process exited with code: 0
+task is sucessful.
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+Invoking app.lambda_handler (python3.7)
+
+
+Fetching lambci/lambda:python3.7 Docker container image......
+Mounting /var/opt/src as /var/task:ro,delegated inside runtime container
+
+
+{"errorType":"Runtime.ImportModuleError","errorMessage":"Unable to import module 'app': No module named 'app'"}
+
+[32mSTART RequestId: bc17a68e-7616-1c76-54d7-a76ceafa6aad Version: $LATEST[0m
+[ERROR] Runtime.ImportModuleError: Unable to import module 'app': No module named 'app'
+[32mEND RequestId: bc17a68e-7616-1c76-54d7-a76ceafa6aad[0m
+[32mREPORT RequestId: bc17a68e-7616-1c76-54d7-a76ceafa6aad	Init Duration: 290.52 ms	Duration: 2.99 ms	Billed Duration: 100 ms	Memory Size: 128 MB	Max Memory Used: 23 MB	[0m
+
+process exited with code: 0
+task is sucessful.
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+Invoking app.lambda_handler (python3.7)
+
+
+Fetching lambci/lambda:python3.7 Docker container image......
+
+Mounting /var/opt/src as /var/task:ro,delegated inside runtime container
+
+
+{"errorType":"Runtime.ImportModuleError","errorMessage":"Unable to import module 'app': No module named 'app'"}
+
+[32mSTART RequestId: 81e6de3a-3467-164c-4ca5-6c7783584520 Version: $LATEST[0m
+[ERROR] Runtime.ImportModuleError: Unable to import module 'app': No module named 'app'
+[32mEND RequestId: 81e6de3a-3467-164c-4ca5-6c7783584520[0m
+[32mREPORT RequestId: 81e6de3a-3467-164c-4ca5-6c7783584520	Init Duration: 306.10 ms	Duration: 3.11 ms	Billed Duration: 100 ms	Memory Size: 128 MB	Max Memory Used: 23 MB	[0m
+
+process exited with code: 0
+task is sucessful.
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+Invoking app.lambda_handler (python3.7)
+
+
+Fetching lambci/lambda:python3.7 Docker container image......
+
+Mounting /var/opt/src as /var/task:ro,delegated inside runtime container
+
+[32mSTART RequestId: 1b6681ac-b516-1f84-8787-530c453f6943 Version: $LATEST[0m
+[ERROR] Runtime.ImportModuleError: Unable to import module 'app': No module named 'app'
+[32mEND RequestId: 1b6681ac-b516-1f84-8787-530c453f6943[0m
+[32mREPORT RequestId: 1b6681ac-b516-1f84-8787-530c453f6943	Init Duration: 268.68 ms	Duration: 3.56 ms	Billed Duration: 100 ms	Memory Size: 128 MB	Max Memory Used: 23 MB	[0m
+
+
+{"errorType":"Runtime.ImportModuleError","errorMessage":"Unable to import module 'app': No module named 'app'"}
+
+process exited with code: 0
+task is sucessful.
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+Invoking app.lambda_handler (python3.7)
+
+
+Fetching lambci/lambda:python3.7 Docker container image......
+Mounting /home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python/src as /var/task:ro,delegated inside runtime container
+
+
+{"errorType":"PermissionError","errorMessage":"[Errno 13] Permission denied: '/var/task/app.py'","stackTrace":["  File \"/var/lang/lib/python3.7/imp.py\", line 300, in find_module\n    with open(file_path, 'rb') as file:\n"]}
+
+[ERROR] PermissionError: [Errno 13] Permission denied: '/var/task/app.py'
+Traceback (most recent call last):
+  File "/var/lang/lib/python3.7/imp.py", line 300, in find_module
+    with open(file_path, 'rb') as file:
+[32mSTART RequestId: 1c0cfdda-14a9-13b5-8867-46b8cb109ac6 Version: $LATEST[0m
+[32mEND RequestId: 1c0cfdda-14a9-13b5-8867-46b8cb109ac6[0m
+[32mREPORT RequestId: 1c0cfdda-14a9-13b5-8867-46b8cb109ac6	Init Duration: 342.46 ms	Duration: 2.07 ms	Billed Duration: 100 ms	Memory Size: 128 MB	Max Memory Used: 23 MB	[0m
+
+process exited with code: 0
+task is sucessful.
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+Invoking app.lambda_handler (python3.7)
+
+
+Fetching lambci/lambda:python3.7 Docker container image......
+
+Mounting /home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python/cloudwatch-alarm-to-slack-python/src as /var/task:ro,delegated inside runtime container
+
+
+{"errorType":"Runtime.ImportModuleError","errorMessage":"Unable to import module 'app': No module named 'app'"}
+
+[32mSTART RequestId: 0d2bc3f8-9475-138e-a879-24109f6cfcaf Version: $LATEST[0m
+[ERROR] Runtime.ImportModuleError: Unable to import module 'app': No module named 'app'
+[32mEND RequestId: 0d2bc3f8-9475-138e-a879-24109f6cfcaf[0m
+[32mREPORT RequestId: 0d2bc3f8-9475-138e-a879-24109f6cfcaf	Init Duration: 319.97 ms	Duration: 3.01 ms	Billed Duration: 100 ms	Memory Size: 128 MB	Max Memory Used: 23 MB	[0m
+
+process exited with code: 0
+task is sucessful.
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+Invoking app.lambda_handler (python3.7)
+
+
+Fetching lambci/lambda:python3.7 Docker container image......
+
+Mounting /home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python/src as /var/task:ro,delegated inside runtime container
+
+
+{"errorType":"PermissionError","errorMessage":"[Errno 13] Permission denied: '/var/task/app.py'","stackTrace":["  File \"/var/lang/lib/python3.7/imp.py\", line 300, in find_module\n    with open(file_path, 'rb') as file:\n"]}
+
+[ERROR] PermissionError: [Errno 13] Permission denied: '/var/task/app.py'
+Traceback (most recent call last):
+  File "/var/lang/lib/python3.7/imp.py", line 300, in find_module
+    with open(file_path, 'rb') as file:
+[32mSTART RequestId: a65373ef-4f6f-15a2-111d-34c880b1d041 Version: $LATEST[0m
+[32mEND RequestId: a65373ef-4f6f-15a2-111d-34c880b1d041[0m
+[32mREPORT RequestId: a65373ef-4f6f-15a2-111d-34c880b1d041	Init Duration: 273.64 ms	Duration: 1.64 ms	Billed Duration: 100 ms	Memory Size: 128 MB	Max Memory Used: 23 MB	[0m
+
+process exited with code: 0
+task is sucessful.
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+Error: --s3-prefix option requires an argument
+
+process exited with code: 2
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-sam-cloudwatch-alarm-to-slack-python.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,/var/run/docker.sock:/var/run/docker.sock,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python:/var/opt,-w,/var/opt,-p,"3000:3000",-e,AWS_ACCESS_KEY_ID=AKIAZPLF46C3LE2UAXWO,-e,AWS_SECRET_ACCESS_KEY=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,-e,AWS_DEFAULT_REGION=ap-northeast-1,develop/aws-sam,package,--output-template-file,packaged.yaml,--s3-bucket,akira0131-sam-bucket,--s3-prefix,
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 52620 22",
+    "OLDPWD": "/home/vagrant/app/lib/aws-sam/stack",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-sam",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 52620 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-sam",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_IAM",
+    "AWS_ACCESS_KEY_ID": "AKIAZPLF46C3LE2UAXWO",
+    "AWS_SECRET_ACCESS_KEY": "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",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_SAM_DOCKER_IMAGE": "develop/aws-sam",
+    "RUNTIME": "python3.7",
+    "DEPENDENCY_MANAGER": "pip"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+Uploading to cloudwatch-alarm-to-slack-python/b2c31644eb00b1201324376f39985bc7  1295 / 1295.0  (100.00%)
+
+Successfully packaged artifacts and wrote output template to file packaged.yaml.
+Execute the following command to deploy the packaged template
+sam deploy --template-file /var/opt/packaged.yaml --stack-name <YOUR STACK NAME>
+
+
+
+
+process exited with code: 0
+task is sucessful.
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+
+	Deploying with following values
+	===============================
+	Stack name                 : cloudwatch-alarm-to-slack-python
+	Region                     : None
+	Confirm changeset          : False
+	Deployment s3 bucket       : None
+	Capabilities               : ["CAPABILITY_IAM"]
+	Parameter overrides        : {}
+
+Initiating deployment
+=====================
+
+
+Waiting for changeset to be created..
+
+Error: Failed to create changeset for the stack: cloudwatch-alarm-to-slack-python, ex: Waiter ChangeSetCreateComplete failed: Waiter encountered a terminal failure state Status: FAILED. Reason: [/Resources/CloudwatchAlarmFunction/Type/Environment/Variables/ENCRYPTED_INCOMING_URL] 'null' values are not allowed in templates
+
+process exited with code: 1
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-sam-cloudwatch-alarm-to-slack-python.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,/var/run/docker.sock:/var/run/docker.sock,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python:/var/opt,-w,/var/opt,-p,"3000:3000",-e,AWS_ACCESS_KEY_ID=AKIAZPLF46C3LE2UAXWO,-e,AWS_SECRET_ACCESS_KEY=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,-e,AWS_DEFAULT_REGION=ap-northeast-1,develop/aws-sam,deploy,--template-file,packaged.yaml,--stack-name,cloudwatch-alarm-to-slack-python,--capabilities,CAPABILITY_IAM
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 52620 22",
+    "OLDPWD": "/home/vagrant/app/lib/aws-sam/stack",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-sam",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 52620 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-sam",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-sam/stack/cloudwatch-alarm-to-slack-python/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_IAM",
+    "AWS_ACCESS_KEY_ID": "AKIAZPLF46C3LE2UAXWO",
+    "AWS_SECRET_ACCESS_KEY": "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",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_SAM_DOCKER_IMAGE": "develop/aws-sam",
+    "RUNTIME": "python3.7",
+    "DEPENDENCY_MANAGER": "pip"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+
+Successfully packaged artifacts and wrote output template to file packaged.yaml.
+Execute the following command to deploy the packaged template
+sam deploy --template-file /var/opt/packaged.yaml --stack-name <YOUR STACK NAME>
+
+
+process exited with code: 0
+task is sucessful.
+stack name: cloudwatch-alarm-to-slack-python
+
+	SAM CLI now collects telemetry to better understand customer needs.
+
+	You can OPT OUT and disable telemetry collection by setting the
+	environment variable SAM_CLI_TELEMETRY=0 in your shell.
+	Thanks for your help!
+
+	Learn More: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-telemetry.html
+
+
+
+	Deploying with following values
+	===============================
+	Stack name                 : cloudwatch-alarm-to-slack-python
+	Region                     : None
+	Confirm changeset          : False
+	Deployment s3 bucket       : None
+	Capabilities               : ["CAPABILITY_IAM"]
+	Parameter overrides        : {}
+
+Initiating deployment
+=====================
+
+
+Waiting for changeset to be created..
+
+
+CloudFormation stack changeset
+------------------------------------------------------------------------------------------------
+Operation                        LogicalResourceId                ResourceType                   
+------------------------------------------------------------------------------------------------
+
++ Add                            ApiCountAlarm                    AWS::CloudWatch::Alarm         
++ Add                            CloudwatchAlarmFunctionAlarmPe   AWS::Lambda::Permission        
+                                 rmission                                                        
++ Add                            CloudwatchAlarmFunctionAlarm     AWS::SNS::Subscription         
++ Add                            CloudwatchAlarmFunctionRole      AWS::IAM::Role                 
++ Add                            CloudwatchAlarmFunction          AWS::Lambda::Function          
++ Add                            CloudwatchAlarmTopic             AWS::SNS::Topic                
+------------------------------------------------------------------------------------------------
+
+Changeset created successfully. arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/samcli-deploy1592696429/f6ce7b28-ccc4-4fa9-bc5c-1bdd8579ee4e
+
+
+
+2020-06-21 08:40:40 - Waiting for stack create/update to complete
+
+
+CloudFormation events from changeset
+-------------------------------------------------------------------------------------------------
+ResourceStatus           ResourceType             LogicalResourceId        ResourceStatusReason   
+-------------------------------------------------------------------------------------------------
+
+CREATE_IN_PROGRESS       AWS::IAM::Role           CloudwatchAlarmFunctio   -                      
+                                                  nRole                                           
+CREATE_IN_PROGRESS       AWS::SNS::Topic          CloudwatchAlarmTopic     -                      
+
+CREATE_IN_PROGRESS       AWS::SNS::Topic          CloudwatchAlarmTopic     Resource creation      
+                                                                           Initiated              
+CREATE_IN_PROGRESS       AWS::IAM::Role           CloudwatchAlarmFunctio   Resource creation      
+                                                  nRole                    Initiated              
+
+CREATE_COMPLETE          AWS::SNS::Topic          CloudwatchAlarmTopic     -                      
+
+CREATE_IN_PROGRESS       AWS::CloudWatch::Alarm   ApiCountAlarm            -                      
+
+CREATE_COMPLETE          AWS::CloudWatch::Alarm   ApiCountAlarm            -                      
+CREATE_IN_PROGRESS       AWS::CloudWatch::Alarm   ApiCountAlarm            Resource creation      
+                                                                           Initiated              
+
+CREATE_COMPLETE          AWS::IAM::Role           CloudwatchAlarmFunctio   -                      
+                                                  nRole                                           
+
+CREATE_IN_PROGRESS       AWS::Lambda::Function    CloudwatchAlarmFunctio   -                      
+                                                  n                                               
+
+CREATE_IN_PROGRESS       AWS::Lambda::Function    CloudwatchAlarmFunctio   Resource creation      
+                                                  n                        Initiated              
+
+CREATE_COMPLETE          AWS::Lambda::Function    CloudwatchAlarmFunctio   -                      
+                                                  n                                               
+
+CREATE_IN_PROGRESS       AWS::Lambda::Permissio   CloudwatchAlarmFunctio   Resource creation      
+                         n                        nAlarmPermission         Initiated              
+
+CREATE_IN_PROGRESS       AWS::SNS::Subscription   CloudwatchAlarmFunctio   -                      
+
+                                                  nAlarm                                          
+
+CREATE_IN_PROGRESS       AWS::Lambda::Permissio   CloudwatchAlarmFunctio   -                      
+                         n                        nAlarmPermission                                
+
+CREATE_COMPLETE          AWS::SNS::Subscription   CloudwatchAlarmFunctio   -                      
+                                                  nAlarm                                          
+
+CREATE_IN_PROGRESS       AWS::SNS::Subscription   CloudwatchAlarmFunctio   Resource creation      
+
+                                                  nAlarm                   Initiated              
+
+CREATE_COMPLETE          AWS::Lambda::Permissio   CloudwatchAlarmFunctio   -                      
+                         n                        nAlarmPermission                                
+
+CREATE_COMPLETE          AWS::CloudFormation::S   cloudwatch-alarm-to-     -                      
+                         tack                     slack-python                                    
+-------------------------------------------------------------------------------------------------
+
+
+Successfully created/updated stack - cloudwatch-alarm-to-slack-python in None
+
+
+process exited with code: 0
+task is sucessful.
+stack name: cloudwatch-alarm-to-slack-python
+process exited with code: 0
+task is sucessful.

@@ -1,0 +1,2796 @@
+stack name: ec2-web-server-template
+{
+    "Parameters": [
+        {
+            "ParameterKey": "KeyPairName",
+            "DefaultValue": "key",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "CompanyPrefix",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceName",
+            "DefaultValue": "web",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeSize",
+            "DefaultValue": "8",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceAMI",
+            "DefaultValue": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "SSHAccessSourceIP",
+            "DefaultValue": "0.0.0.0/0",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "PJPrefix",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceInstanceType",
+            "DefaultValue": "t2.micro",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeType",
+            "DefaultValue": "gp2",
+            "NoEcho": false
+        }
+    ],
+    "Description": "???????EC2????????????????????????????????????????AMI,????????????????????? ??????????Web?????????????",
+    "Capabilities": [
+        "CAPABILITY_NAMED_IAM"
+    ],
+    "CapabilitiesReason": "The following resource(s) require capabilities: [AWS::IAM::Role]"
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: ec2-web-server-template
+
+
+Usage:	docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default
+                           "/home/vagrant/.docker")
+  -c, --context string     Name of the context to use to connect to the
+                           daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level
+                           ("debug"|"info"|"warn"|"error"|"fatal")
+                           (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default
+                           "/home/vagrant/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default
+                           "/home/vagrant/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default
+                           "/home/vagrant/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  engine      Manage the docker engine
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+/bin/sh: 2: Syntax error: "(" unexpected
+
+process exited with code: 2
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: 
+                        run --rm -i                             -v ~/app/.aws:/root/.aws                             -v (path.resolve(__dirname, '../') + '/template/' + config.argv.STACK_NAME):/var/opt                             -w /var/opt                             amazon/aws-cli cloudformation validate-template                                 --template-body file://template.yaml                                 --region ap-northeast-1
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 52875 22",
+    "OLDPWD": "/home/vagrant/app",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 52875 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAMETER_FILE": "demo.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: ec2-web-server-template
+
+
+Usage:	docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default
+                           "/home/vagrant/.docker")
+  -c, --context string     Name of the context to use to connect to the
+                           daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level
+                           ("debug"|"info"|"warn"|"error"|"fatal")
+                           (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default
+                           "/home/vagrant/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default
+                           "/home/vagrant/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default
+                           "/home/vagrant/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  engine      Manage the docker engine
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+/bin/sh: 2: run: not found
+
+process exited with code: 127
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: 
+                        run --rm -i                             -v ~/app/.aws:/root/.aws                             -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                             -w /var/opt                             amazon/aws-cli cloudformation validate-template                                 --template-body file://template.yaml                                 --region ap-northeast-1
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 52875 22",
+    "OLDPWD": "/home/vagrant/app",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 52875 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAMETER_FILE": "demo.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: ec2-web-server-template
+{
+    "Parameters": [
+        {
+            "ParameterKey": "KeyPairName",
+            "DefaultValue": "key",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "CompanyPrefix",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceName",
+            "DefaultValue": "web",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeSize",
+            "DefaultValue": "8",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceAMI",
+            "DefaultValue": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "SSHAccessSourceIP",
+            "DefaultValue": "0.0.0.0/0",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "PJPrefix",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceInstanceType",
+            "DefaultValue": "t2.micro",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeType",
+            "DefaultValue": "gp2",
+            "NoEcho": false
+        }
+    ],
+    "Description": "???????EC2????????????????????????????????????????AMI,????????????????????? ??????????Web?????????????",
+    "Capabilities": [
+        "CAPABILITY_NAMED_IAM"
+    ],
+    "CapabilitiesReason": "The following resource(s) require capabilities: [AWS::IAM::Role]"
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: demo-dev-ec2-web-server-template
+{
+    "Parameters": [
+        {
+            "ParameterKey": "KeyPairName",
+            "DefaultValue": "key",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "CompanyPrefix",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceName",
+            "DefaultValue": "web",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeSize",
+            "DefaultValue": "8",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceAMI",
+            "DefaultValue": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "SSHAccessSourceIP",
+            "DefaultValue": "0.0.0.0/0",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "PJPrefix",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceInstanceType",
+            "DefaultValue": "t2.micro",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeType",
+            "DefaultValue": "gp2",
+            "NoEcho": false
+        }
+    ],
+    "Description": "???????EC2????????????????????????????????????????AMI,????????????????????? ??????????Web?????????????",
+    "Capabilities": [
+        "CAPABILITY_NAMED_IAM"
+    ],
+    "CapabilitiesReason": "The following resource(s) require capabilities: [AWS::IAM::Role]"
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-demo-ec2-web-server-template
+
+An error occurred (ValidationError) when calling the ValidateTemplate operation: Template format error: Every DeletionPolicy member must be a string.
+
+process exited with code: 254
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        docker run --rm -i                             -v ~/app/.aws:/root/.aws                             -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                             -w /var/opt                             amazon/aws-cli cloudformation validate-template                                 --template-body file://template.yaml                                 --region ap-northeast-1
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 52875 22",
+    "OLDPWD": "/home/vagrant/app/lib/aws-cfn/template",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 52875 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "demo.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-demo-ec2-web-server-template
+
+An error occurred (ValidationError) when calling the ValidateTemplate operation: Invalid template parameter property 'default'
+
+process exited with code: 254
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        docker run --rm -i                             -v ~/app/.aws:/root/.aws                             -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                             -w /var/opt                             amazon/aws-cli cloudformation validate-template                                 --template-body file://template.yaml                                 --region ap-northeast-1
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 52875 22",
+    "OLDPWD": "/home/vagrant/app/lib/aws-cfn/template",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 52875 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "demo.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-demo-ec2-web-server-template
+
+An error occurred (ValidationError) when calling the ValidateTemplate operation: Template format error: Every DeletionPolicy member must be a string.
+
+process exited with code: 254
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        docker run --rm -i                             -v ~/app/.aws:/root/.aws                             -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                             -w /var/opt                             amazon/aws-cli cloudformation validate-template                                 --template-body file://template.yaml                                 --region ap-northeast-1
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 52875 22",
+    "OLDPWD": "/home/vagrant/app/lib/aws-cfn/template",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 52875 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "demo.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-demo-ec2-web-server-template
+{
+    "Parameters": [
+        {
+            "ParameterKey": "CompanyPrefix",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceName",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeSize",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceAMI",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "SSHAccessSourceIP",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "PJPrefix",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "Environment",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceKeyPairName",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceInstanceType",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeType",
+            "NoEcho": false
+        }
+    ],
+    "Description": "???????EC2????????????????????????????????????????AMI,????????????????????? ??????????Web?????????????",
+    "Capabilities": [
+        "CAPABILITY_NAMED_IAM"
+    ],
+    "CapabilitiesReason": "The following resource(s) require capabilities: [AWS::IAM::Role]"
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-demo-ec2-web-server-template
+
+An error occurred (ValidationError) when calling the CreateChangeSet operation: Template format error: unsupported structure.
+
+stack name: tutorial-demo-ec2-web-server-template
+
+An error occurred (ValidationError) when calling the CreateChangeSet operation: Template format error: unsupported structure.
+
+stack name: tutorial-demo-ec2-web-server-template
+
+An error occurred (ValidationError) when calling the CreateChangeSet operation: Template format error: unsupported structure.
+
+process exited with code: 254
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        docker run --rm -i                             -v ~/app/.aws:/root/.aws                             -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                             -w /var/opt                             amazon/aws-cli cloudformation create-change-set                                 --change-set-name future-ticket-0001                                 --cli-input-json file://demo.json                                 --region ap-northeast-1
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 52875 22",
+    "OLDPWD": "/home/vagrant/app/lib/aws-cfn/template",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 52875 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "demo.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-demo-ec2-web-server-template
+{
+    "Id": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/f086f388-5033-4981-8531-08af513697c6",
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a"
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-demo-ec2-web-server-template
+
+
+Usage:	docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default
+                           "/home/vagrant/.docker")
+  -c, --context string     Name of the context to use to connect to the
+                           daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level
+                           ("debug"|"info"|"warn"|"error"|"fatal")
+                           (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default
+                           "/home/vagrant/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default
+                           "/home/vagrant/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default
+                           "/home/vagrant/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  engine      Manage the docker engine
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+
+An error occurred (ValidationError) when calling the CreateChangeSet operation: Either Template URL or Template Body must be specified.
+
+process exited with code: 254
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: 
+                        docker run --rm -i                             -v ~/app/.aws:/root/.aws                             -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                             -w /var/opt                             amazon/aws-cli cloudformation create-change-set                                 --change-set-name future-ticket-0001                                 --stack-name tutorial-demo-ec2-web-server-template                                 --region ap-northeast-1
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 52875 22",
+    "OLDPWD": "/home/vagrant/app/lib/aws-cfn/template",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 52875 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "demo.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-demo-ec2-web-server-template
+
+
+Usage:	docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default
+                           "/home/vagrant/.docker")
+  -c, --context string     Name of the context to use to connect to the
+                           daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level
+                           ("debug"|"info"|"warn"|"error"|"fatal")
+                           (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default
+                           "/home/vagrant/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default
+                           "/home/vagrant/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default
+                           "/home/vagrant/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  engine      Manage the docker engine
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-demo-ec2-web-server-template
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-demo-ec2-web-server-template
+{
+    "Parameters": [
+        {
+            "ParameterKey": "CompanyPrefix",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceName",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeSize",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceAMI",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "SSHAccessSourceIP",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "PJPrefix",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "Environment",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceKeyPairName",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceInstanceType",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeType",
+            "NoEcho": false
+        }
+    ],
+    "Description": "???????EC2????????????????????????????????????????AMI,????????????????????? ??????????Web?????????????",
+    "Capabilities": [
+        "CAPABILITY_NAMED_IAM"
+    ],
+    "CapabilitiesReason": "The following resource(s) require capabilities: [AWS::IAM::Role]"
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-demo-ec2-web-server-template
+{
+    "Id": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/0ee62ce7-ff88-4203-9a2e-a057fd019a33",
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a"
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-demo-ec2-web-server-template
+/bin/sh: 3: fn::aws_option: not found
+
+{
+    "Changes": [
+        {
+            "Type": "Resource",
+            "ResourceChange": {
+                "Action": "Modify",
+                "LogicalResourceId": "EC2IAMRole",
+                "PhysicalResourceId": "demo-web-IAMRole",
+                "ResourceType": "AWS::IAM::Role",
+                "Replacement": "True",
+                "Scope": [
+                    "Properties"
+                ],
+                "Details": [
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "RoleName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "RoleName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "RoleName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "Resource",
+            "ResourceChange": {
+                "Action": "Modify",
+                "LogicalResourceId": "EC2InstanceProfile",
+                "PhysicalResourceId": "demo-web-InstanceProfile",
+                "ResourceType": "AWS::IAM::InstanceProfile",
+                "Replacement": "True",
+                "Scope": [
+                    "Properties"
+                ],
+                "Details": [
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "Roles",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ResourceReference",
+                        "CausingEntity": "EC2IAMRole"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "InstanceProfileName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "InstanceProfileName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "InstanceProfileName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "Resource",
+            "ResourceChange": {
+                "Action": "Modify",
+                "LogicalResourceId": "EC2Instance",
+                "PhysicalResourceId": "i-0cd090ec1f134c234",
+                "ResourceType": "AWS::EC2::Instance",
+                "Replacement": "Conditional",
+                "Scope": [
+                    "Properties",
+                    "Tags"
+                ],
+                "Details": [
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "IamInstanceProfile",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ResourceReference",
+                        "CausingEntity": "EC2InstanceProfile"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "SecurityGroupIds",
+                            "RequiresRecreation": "Conditionally"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ResourceReference",
+                        "CausingEntity": "ManagedSecurityGroup"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "SecurityGroupIds",
+                            "RequiresRecreation": "Conditionally"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ResourceReference",
+                        "CausingEntity": "WebSecurityGroup"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "Resource",
+            "ResourceChange": {
+                "Action": "Modify",
+                "LogicalResourceId": "ManagedSecurityGroup",
+                "PhysicalResourceId": "sg-0fe69d6cd905ecd59",
+                "ResourceType": "AWS::EC2::SecurityGroup",
+                "Replacement": "True",
+                "Scope": [
+                    "Properties",
+                    "Tags"
+                ],
+                "Details": [
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "SecurityGroupIngress",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "SecurityGroupIngress",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "SSHAccessSourceIP"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "Resource",
+            "ResourceChange": {
+                "Action": "Modify",
+                "LogicalResourceId": "WebSecurityGroup",
+                "PhysicalResourceId": "sg-048fd398745eef3f5",
+                "ResourceType": "AWS::EC2::SecurityGroup",
+                "Replacement": "True",
+                "Scope": [
+                    "Properties",
+                    "Tags"
+                ],
+                "Details": [
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    }
+                ]
+            }
+        }
+    ],
+    "ChangeSetName": "future-ticket-0001",
+    "ChangeSetId": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/0ee62ce7-ff88-4203-9a2e-a057fd019a33",
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+    "StackName": "tutorial-demo-ec2-web-server-template",
+    "Description": null,
+    "Parameters": [
+        {
+            "ParameterKey": "CompanyPrefix",
+            "ParameterValue": "ar"
+        },
+        {
+            "ParameterKey": "EC2InstanceName",
+            "ParameterValue": "web"
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeSize",
+            "ParameterValue": "8"
+        },
+        {
+            "ParameterKey": "EC2InstanceAMI",
+            "ParameterValue": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2",
+            "ResolvedValue": "ami-06ad9296e6cf1e3cf"
+        },
+        {
+            "ParameterKey": "SSHAccessSourceIP",
+            "ParameterValue": "0.0.0.0"
+        },
+        {
+            "ParameterKey": "PJPrefix",
+            "ParameterValue": "tutorial"
+        },
+        {
+            "ParameterKey": "Environment",
+            "ParameterValue": "demo"
+        },
+        {
+            "ParameterKey": "EC2InstanceKeyPairName",
+            "ParameterValue": "key"
+        },
+        {
+            "ParameterKey": "EC2InstanceInstanceType",
+            "ParameterValue": "t2.micro"
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeType",
+            "ParameterValue": "gp2"
+        }
+    ],
+    "CreationTime": "2020-07-13T15:26:52.965000+00:00",
+    "ExecutionStatus": "AVAILABLE",
+    "Status": "CREATE_COMPLETE",
+    "StatusReason": null,
+    "NotificationARNs": [],
+    "RollbackConfiguration": {},
+    "Capabilities": [
+        "CAPABILITY_NAMED_IAM"
+    ],
+    "Tags": null
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-demo-ec2-web-server-template
+{
+    "Changes": [
+        {
+            "Type": "Resource",
+            "ResourceChange": {
+                "Action": "Modify",
+                "LogicalResourceId": "EC2IAMRole",
+                "PhysicalResourceId": "demo-web-IAMRole",
+                "ResourceType": "AWS::IAM::Role",
+                "Replacement": "True",
+                "Scope": [
+                    "Properties"
+                ],
+                "Details": [
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "RoleName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "RoleName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "RoleName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "Resource",
+            "ResourceChange": {
+                "Action": "Modify",
+                "LogicalResourceId": "EC2InstanceProfile",
+                "PhysicalResourceId": "demo-web-InstanceProfile",
+                "ResourceType": "AWS::IAM::InstanceProfile",
+                "Replacement": "True",
+                "Scope": [
+                    "Properties"
+                ],
+                "Details": [
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "Roles",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ResourceReference",
+                        "CausingEntity": "EC2IAMRole"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "InstanceProfileName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "InstanceProfileName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "InstanceProfileName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "Resource",
+            "ResourceChange": {
+                "Action": "Modify",
+                "LogicalResourceId": "EC2Instance",
+                "PhysicalResourceId": "i-0cd090ec1f134c234",
+                "ResourceType": "AWS::EC2::Instance",
+                "Replacement": "Conditional",
+                "Scope": [
+                    "Properties",
+                    "Tags"
+                ],
+                "Details": [
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "IamInstanceProfile",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ResourceReference",
+                        "CausingEntity": "EC2InstanceProfile"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "SecurityGroupIds",
+                            "RequiresRecreation": "Conditionally"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ResourceReference",
+                        "CausingEntity": "ManagedSecurityGroup"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "SecurityGroupIds",
+                            "RequiresRecreation": "Conditionally"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ResourceReference",
+                        "CausingEntity": "WebSecurityGroup"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "Resource",
+            "ResourceChange": {
+                "Action": "Modify",
+                "LogicalResourceId": "ManagedSecurityGroup",
+                "PhysicalResourceId": "sg-0fe69d6cd905ecd59",
+                "ResourceType": "AWS::EC2::SecurityGroup",
+                "Replacement": "True",
+                "Scope": [
+                    "Properties",
+                    "Tags"
+                ],
+                "Details": [
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "SecurityGroupIngress",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    },
+                    {
+                        
+"Target": {
+                            "Attribute": "Properties",
+                            "Name": "SecurityGroupIngress",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "SSHAccessSourceIP"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "Resource",
+            "ResourceChange": {
+                "Action": "Modify",
+                "LogicalResourceId": "WebSecurityGroup",
+                "PhysicalResourceId": "sg-048fd398745eef3f5",
+                "ResourceType": "AWS::EC2::SecurityGroup",
+                "Replacement": "True",
+                "Scope": [
+                    "Properties",
+                    "Tags"
+                ],
+                "Details": [
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    }
+                ]
+            }
+        }
+    ],
+    "ChangeSetName": "future-ticket-0001",
+    "ChangeSetId": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/0ee62ce7-ff88-4203-9a2e-a057fd019a33",
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+    "StackName": "tutorial-demo-ec2-web-server-template",
+    "Description": null,
+    "Parameters": [
+        {
+            "ParameterKey": "CompanyPrefix",
+            "ParameterValue": "ar"
+        },
+        {
+            "ParameterKey": "EC2InstanceName",
+            "ParameterValue": "web"
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeSize",
+            "ParameterValue": "8"
+        },
+        {
+            "ParameterKey": "EC2InstanceAMI",
+            "ParameterValue": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2",
+            "ResolvedValue": "ami-06ad9296e6cf1e3cf"
+        },
+        {
+            "ParameterKey": "SSHAccessSourceIP",
+            "ParameterValue": "0.0.0.0"
+        },
+        {
+            "ParameterKey": "PJPrefix",
+            "ParameterValue": "tutorial"
+        },
+        {
+            "ParameterKey": "Environment",
+            "ParameterValue": "demo"
+        },
+        {
+            "ParameterKey": "EC2InstanceKeyPairName",
+            "ParameterValue": "key"
+        },
+        {
+            "ParameterKey": "EC2InstanceInstanceType",
+            "ParameterValue": "t2.micro"
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeType",
+            "ParameterValue": "gp2"
+        }
+    ],
+    "CreationTime": "2020-07-13T15:26:52.965000+00:00",
+    "ExecutionStatus": "AVAILABLE",
+    "Status": "CREATE_COMPLETE",
+    "StatusReason": null,
+    "NotificationARNs": [],
+    "RollbackConfiguration": {},
+    "Capabilities": [
+        "CAPABILITY_NAMED_IAM"
+    ],
+    "Tags": null
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-demo-ec2-web-server-template
+{
+    "Summaries": [
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "ChangeSetId": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/0ee62ce7-ff88-4203-9a2e-a057fd019a33",
+            "ChangeSetName": "future-ticket-0001",
+            "ExecutionStatus": "AVAILABLE",
+            "Status": "CREATE_COMPLETE",
+            "CreationTime": "2020-07-13T15:26:52.965000+00:00"
+        }
+    ]
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-demo-ec2-web-server-template
+{
+    "Stacks": [
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "ChangeSetId": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/tutorial-demo-ec2-web-server-template-b85e16ae-e468-8369-d23b-da67e17ad895/5fea4a88-13f2-4ee3-88d2-81c865c901eb",
+            "Description": "???????EC2????????????????????????????????????????AMI,????????????????????? ??????????Web?????????????",
+            "Parameters": [
+                {
+                    "ParameterKey": "KeyPairName",
+                    "ParameterValue": "key"
+                },
+                {
+                    "ParameterKey": "CompanyPrefix",
+                    "ParameterValue": "ar"
+                },
+                {
+                    "ParameterKey": "EC2InstanceName",
+                    "ParameterValue": "web"
+                },
+                {
+                    "ParameterKey": "EC2InstanceVolumeSize",
+                    "ParameterValue": "8"
+                },
+                {
+                    "ParameterKey": "EC2InstanceAMI",
+                    "ParameterValue": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2",
+                    "ResolvedValue": "ami-06ad9296e6cf1e3cf"
+                },
+                {
+                    "ParameterKey": "SSHAccessSourceIP",
+                    "ParameterValue": "0.0.0.0/0"
+                },
+                {
+                    "ParameterKey": "PJPrefix",
+                    "ParameterValue": "demo"
+                },
+                {
+                    "ParameterKey": "EC2InstanceInstanceType",
+                    "ParameterValue": "t2.micro"
+                },
+                {
+                    "ParameterKey": "EC2InstanceVolumeType",
+                    "ParameterValue": "gp2"
+                }
+            ],
+            "CreationTime": "2020-07-13T14:24:25.275000+00:00",
+            "LastUpdatedTime": "2020-07-13T14:33:30.328000+00:00",
+            "RollbackConfiguration": {},
+            "StackStatus": "IMPORT_COMPLETE",
+            "DisableRollback": false,
+            "NotificationARNs": [],
+            "Capabilities": [
+                "CAPABILITY_NAMED_IAM"
+            ],
+            "Tags": [],
+            "EnableTerminationProtection": false,
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        }
+    ]
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-demo-ec2-web-server-template
+{
+    "StackEvents": [
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "f2565270-c515-11ea-b11f-06c1e14cac70",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "tutorial-demo-ec2-web-server-template",
+            "PhysicalResourceId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "ResourceType": "AWS::CloudFormation::Stack",
+            "Timestamp": "2020-07-13T14:34:23.876000+00:00",
+            "ResourceStatus": "IMPORT_COMPLETE",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "EC2Instance-UPDATE_COMPLETE-2020-07-13T14:34:22.138Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "EC2Instance",
+            "PhysicalResourceId": "i-0cd090ec1f134c234",
+            "ResourceType": "AWS::EC2::Instance",
+            "Timestamp": "2020-07-13T14:34:22.138000+00:00",
+            "ResourceStatus": "UPDATE_COMPLETE",
+            "ResourceProperties": "{\"Tenancy\":\"default\",\"HibernationOptions\":{\"Configured\":\"false\"},\"UserData\":\"IyEgL2Jpbi9iYXNoCnl1bSB1cGRhdGUgLXkK\",\"BlockDeviceMappings\":[{\"Ebs\":{\"VolumeType\":\"gp2\",\"Encrypted\":\"false\",\"VolumeSize\":\"8\",\"DeleteOnTermination\":\"true\"},\"DeviceName\":\"/dev/xvda\"}],\"AvailabilityZone\":\"ap-northeast-1a\",\"IamInstanceProfile\":\"demo-web-InstanceProfile\",\"SubnetId\":\"subnet-048336b44c5a18b0b\",\"SecurityGroupIds\":[\"sg-0fe69d6cd905ecd59\",\"sg-048fd398745eef3f5\"],\"EbsOptimized\":\"false\",\"KeyName\":\"key\",\"DisableApiTermination\":\"false\",\"SourceDestCheck\":\"true\",\"ImageId\":\"ami-06ad9296e6cf1e3cf\",\"InstanceType\":\"t2.micro\",\"Tags\":[{\"Value\":\"demo-web-01\",\"Key\":\"Name\"}],\"Monitoring\":\"false\"}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "EC2Instance-UPDATE_IN_PROGRESS-2020-07-13T14:34:06.756Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "EC2Instance",
+            "PhysicalResourceId": "i-0cd090ec1f134c234",
+            "ResourceType": "AWS::EC2::Instance",
+            "Timestamp": "2020-07-13T14:34:06.756000+00:00",
+            "ResourceStatus": "UPDATE_IN_PROGRESS",
+            "ResourceStatusReason": "Apply stack-level tags to imported resource if applicable.",
+            "ResourceProperties": "{\"Tenancy\":\"default\",\"HibernationOptions\":{\"Configured\":\"false\"},\"UserData\":\"IyEgL2Jpbi9iYXNoCnl1bSB1cGRhdGUgLXkK\",\"BlockDeviceMappings\":[{\"Ebs\":{\"VolumeType\":\"gp2\",\"Encrypted\":\"false\",\"VolumeSize\":\"8\",\"DeleteOnTermination\":\"true\"},\"DeviceName\":\"/dev/xvda\"}],\"AvailabilityZone\":\"ap-northeast-1a\",\"IamInstanceProfile\":\"demo-web-InstanceProfile\",\"SubnetId\":\"subnet-048336b44c5a18b0b\",\"SecurityGroupIds\":[\"sg-0fe69d6cd905ecd59\",\"sg-048fd398745eef3f5\"],\"EbsOptimized\":\"false\",\"KeyName\":\"key\",\"DisableApiTermination\":\"false\",\"SourceDestCheck\":\"true\",\"ImageId\":\"ami-06ad9296e6cf1e3cf\",\"InstanceType\":\"t2.micro\",\"Tags\":[{\"Value\":\"demo-web-01\",\"Key\":\"Name\"}],\"Monitoring\":\"false\"}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "EC2Instance-IMPORT_COMPLETE-2020-07-13T14:34:05.643Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "EC2Instance",
+            "PhysicalResourceId": "i-0cd090ec1f134c234",
+            "ResourceType": "AWS::EC2::Instance",
+            "Timestamp": "2020-07-13T14:34:05.643000+00:00",
+            "ResourceStatus": "IMPORT_COMPLETE",
+            "ResourceStatusReason": "Resource import completed.",
+            "ResourceProperties": "{\"Tenancy\":\"default\",\"HibernationOptions\":{\"Configured\":\"false\"},\"UserData\":\"IyEgL2Jpbi9iYXNoCnl1bSB1cGRhdGUgLXkK\",\"BlockDeviceMappings\":[{\"Ebs\":{\"VolumeType\":\"gp2\",\"Encrypted\":\"false\",\"VolumeSize\":\"8\",\"DeleteOnTermination\":\"true\"},\"DeviceName\":\"/dev/xvda\"}],\"AvailabilityZone\":\"ap-northeast-1a\",\"IamInstanceProfile\":\"demo-web-InstanceProfile\",\"SubnetId\":\"subnet-048336b44c5a18b0b\",\"SecurityGroupIds\":[\"sg-0fe69d6cd905ecd59\",\"sg-048fd398745eef3f5\"],\"EbsOptimized\":\"false\",\"KeyName\":\"key\",\"DisableApiTermination\":\"false\",\"SourceDestCheck\":\"true\",\"ImageId\":\"ami-06ad9296e6cf1e3cf\",\"InstanceType\":\"t2.micro\",\"Tags\":[{\"Value\":\"demo-web-01\",\"Key\":\"Name\"}],\"Monitoring\":\"false\"}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "EC2Instance-IMPORT_IN_PROGRESS-2020-07-13T14:34:05.228Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "EC2Instance",
+            "PhysicalResourceId": "i-0cd090ec1f134c234",
+            "ResourceType": "AWS::EC2::Instance",
+            "Timestamp": "2020-07-13T14:34:05.228000+00:00",
+            "ResourceStatus": "IMPORT_IN_PROGRESS",
+            "ResourceProperties": "{\"Tenancy\":\"default\",\"HibernationOptions\":{\"Configured\":\"false\"},\"UserData\":\"IyEgL2Jpbi9iYXNoCnl1bSB1cGRhdGUgLXkK\",\"BlockDeviceMappings\":[{\"Ebs\":{\"VolumeType\":\"gp2\",\"Encrypted\":\"false\",\"VolumeSize\":\"8\",\"DeleteOnTermination\":\"true\"},\"DeviceName\":\"/dev/xvda\"}],\"AvailabilityZone\":\"ap-northeast-1a\",\"IamInstanceProfile\":\"demo-web-InstanceProfile\",\"SubnetId\":\"subnet-048336b44c5a18b0b\",\"SecurityGroupIds\":[\"sg-0fe69d6cd905ecd59\",\"sg-048fd398745eef3f5\"],\"EbsOptimized\":\"false\",\"KeyName\":\"key\",\"DisableApiTermination\":\"false\",\"SourceDestCheck\":\"true\",\"ImageId\":\"ami-06ad9296e6cf1e3cf\",\"InstanceType\":\"t2.micro\",\"Tags\":[{\"Value\":\"demo-web-01\",\"Key\":\"Name\"}],\"Monitoring\":\"false\"}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "EC2Instance-IMPORT_IN_PROGRESS-2020-07-13T14:34:04.295Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "EC2Instance",
+            "PhysicalResourceId": "",
+            "ResourceType": "AWS::EC2::Instance",
+            "Timestamp": "2020-07-13T14:34:04.295000+00:00",
+            "ResourceStatus": "IMPORT_IN_PROGRESS",
+            "ResourceStatusReason": "Resource import started.",
+            "ResourceProperties": "{\"Tenancy\":\"default\",\"HibernationOptions\":{\"Configured\":\"false\"},\"UserData\":\"IyEgL2Jpbi9iYXNoCnl1bSB1cGRhdGUgLXkK\",\"BlockDeviceMappings\":[{\"Ebs\":{\"VolumeType\":\"gp2\",\"Encrypted\":\"false\",\"VolumeSize\":\"8\",\"DeleteOnTermination\":\"true\"},\"DeviceName\":\"/dev/xvda\"}],\"AvailabilityZone\":\"ap-northeast-1a\",\"IamInstanceProfile\":\"demo-web-InstanceProfile\",\"SubnetId\":\"subnet-048336b44c5a18b0b\",\"SecurityGroupIds\":[\"sg-0fe69d6cd905ecd59\",\"sg-048fd398745eef3f5\"],\"EbsOptimized\":\"false\",\"KeyName\":\"key\",\"DisableApiTermination\":\"false\",\"SourceDestCheck\":\"true\",\"ImageId\":\"ami-06ad9296e6cf1e3cf\",\"InstanceType\":\"t2.micro\",\"Tags\":[{\"Value\":\"demo-web-01\",\"Key\":\"Name\"}],\"Monitoring\":\"false\"}"
+,
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "EC2InstanceProfile-UPDATE_COMPLETE-2020-07-13T14:34:01.926Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "EC2InstanceProfile",
+            "PhysicalResourceId": "demo-web-InstanceProfile",
+            "ResourceType": "AWS::IAM::InstanceProfile",
+            "Timestamp": "2020-07-13T14:34:01.926000+00:00",
+            "ResourceStatus": "UPDATE_COMPLETE",
+            "ResourceProperties": "{\"Path\":\"/\",\"InstanceProfileName\":\"demo-web-InstanceProfile\",\"Roles\":[\"demo-web-IAMRole\"]}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "EC2InstanceProfile-UPDATE_IN_PROGRESS-2020-07-13T14:34:01.775Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "EC2InstanceProfile",
+            "PhysicalResourceId": "demo-web-InstanceProfile",
+            "ResourceType": "AWS::IAM::InstanceProfile",
+            "Timestamp": "2020-07-13T14:34:01.775000+00:00",
+            "ResourceStatus": "UPDATE_IN_PROGRESS",
+            "ResourceStatusReason": "Apply stack-level tags to imported resource if applicable.",
+            "ResourceProperties": "{\"Path\":\"/\",\"InstanceProfileName\":\"demo-web-InstanceProfile\",\"Roles\":[\"demo-web-IAMRole\"]}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "EC2InstanceProfile-IMPORT_COMPLETE-2020-07-13T14:34:00.719Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "EC2InstanceProfile",
+            "PhysicalResourceId": "demo-web-InstanceProfile",
+            "ResourceType": "AWS::IAM::InstanceProfile",
+            "Timestamp": "2020-07-13T14:34:00.719000+00:00",
+            "ResourceStatus": "IMPORT_COMPLETE",
+            "ResourceStatusReason": "Resource import completed.",
+            "ResourceProperties": "{\"Path\":\"/\",\"InstanceProfileName\":\"demo-web-InstanceProfile\",\"Roles\":[\"demo-web-IAMRole\"]}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "EC2InstanceProfile-IMPORT_IN_PROGRESS-2020-07-13T14:34:00.388Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "EC2InstanceProfile",
+            "PhysicalResourceId": "demo-web-InstanceProfile",
+            "ResourceType": "AWS::IAM::InstanceProfile",
+            "Timestamp": "2020-07-13T14:34:00.388000+00:00",
+            "ResourceStatus": "IMPORT_IN_PROGRESS",
+            "ResourceProperties": "{\"Path\":\"/\",\"InstanceProfileName\":\"demo-web-InstanceProfile\",\"Roles\":[\"demo-web-IAMRole\"]}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "EC2InstanceProfile-IMPORT_IN_PROGRESS-2020-07-13T14:33:59.193Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "EC2InstanceProfile",
+            "PhysicalResourceId": "",
+            "ResourceType": "AWS::IAM::InstanceProfile",
+            "Timestamp": "2020-07-13T14:33:59.193000+00:00",
+            "ResourceStatus": "IMPORT_IN_PROGRESS",
+            "ResourceStatusReason": "Resource import started.",
+            "ResourceProperties": "{\"Path\":\"/\",\"InstanceProfileName\":\"demo-web-InstanceProfile\",\"Roles\":[\"demo-web-IAMRole\"]}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "EC2IAMRole-UPDATE_COMPLETE-2020-07-13T14:33:56.867Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "EC2IAMRole",
+            "PhysicalResourceId": "demo-web-IAMRole",
+            "ResourceType": "AWS::IAM::Role",
+            "Timestamp": "2020-07-13T14:33:56.867000+00:00",
+            "ResourceStatus": "UPDATE_COMPLETE",
+            "ResourceProperties": "{\"Path\":\"/\",\"ManagedPolicyArns\":[\"arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM\",\"arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess\"],\"RoleName\":\"demo-web-IAMRole\",\"AssumeRolePolicyDocument\":{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"sts:AssumeRole\"],\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"ec2.amazonaws.com\"]}}]}}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "ManagedSecurityGroup-UPDATE_COMPLETE-2020-07-13T14:33:51.388Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "ManagedSecurityGroup",
+            "PhysicalResourceId": "sg-0fe69d6cd905ecd59",
+            "ResourceType": "AWS::EC2::SecurityGroup",
+            "Timestamp": "2020-07-13T14:33:51.388000+00:00",
+            "ResourceStatus": "UPDATE_COMPLETE",
+            "ResourceProperties": "{\"GroupName\":\"demo-managed-sg\",\"GroupDescription\":\"-\",\"VpcId\":\"vpc-062a947d9ca295353\",\"SecurityGroupIngress\":[{\"CidrIp\":\"0.0.0.0/0\",\"FromPort\":\"22\",\"ToPort\":\"22\",\"IpProtocol\":\"tcp\"}],\"Tags\":[{\"Value\":\"demo-managed-sg\",\"Key\":\"Name\"}],\"SecurityGroupEgress\":[{\"CidrIp\":\"0.0.0.0/0\",\"IpProtocol\":\"-1\"}]}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "WebSecurityGroup-UPDATE_COMPLETE-2020-07-13T14:33:51.149Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "WebSecurityGroup",
+            "PhysicalResourceId": "sg-048fd398745eef3f5",
+            "ResourceType": "AWS::EC2::SecurityGroup",
+            "Timestamp": "2020-07-13T14:33:51.149000+00:00",
+            "ResourceStatus": "UPDATE_COMPLETE",
+            "ResourceProperties": "{\"GroupName\":\"demo-web-sg\",\"GroupDescription\":\"-\",\"VpcId\":\"vpc-062a947d9ca295353\",\"Tags\":[{\"Value\":\"demo-web-sg\",\"Key\":\"Name\"}]}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "EC2IAMRole-UPDATE_IN_PROGRESS-2020-07-13T14:33:36.682Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "EC2IAMRole",
+            "PhysicalResourceId": "demo-web-IAMRole",
+            "ResourceType": "AWS::IAM::Role",
+            "Timestamp": "2020-07-13T14:33:36.682000+00:00",
+            "ResourceStatus": "UPDATE_IN_PROGRESS",
+            "ResourceStatusReason": "Apply stack-level tags to imported resource if applicable.",
+            "ResourceProperties": "{\"Path\":\"/\",\"ManagedPolicyArns\":[\"arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM\",\"arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess\"],\"RoleName\":\"demo-web-IAMRole\",\"AssumeRolePolicyDocument\":{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"sts:AssumeRole\"],\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"ec2.amazonaws.com\"]}}]}}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "ManagedSecurityGroup-UPDATE_IN_PROGRESS-2020-07-13T14:33:36.036Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "ManagedSecurityGroup",
+            "PhysicalResourceId": "sg-0fe69d6cd905ecd59",
+            "ResourceType": "AWS::EC2::SecurityGroup",
+            "Timestamp": "2020-07-13T14:33:36.036000+00:00",
+            "ResourceStatus": "UPDATE_IN_PROGRESS",
+            "ResourceStatusReason": "Apply stack-level tags to imported resource if applicable.",
+            "ResourceProperties": "{\"GroupName\":\"demo-managed-sg\",\"GroupDescription\":\"-\",\"VpcId\":\"vpc-062a947d9ca295353\",\"SecurityGroupIngress\":[{\"CidrIp\":\"0.0.0.0/0\",\"FromPort\":\"22\",\"ToPort\":\"22\",\"IpProtocol\":\"tcp\"}],\"Tags\":[{\"Value\":\"demo-managed-sg\",\"Key\":\"Name\"}],\"SecurityGroupEgress\":[{\"CidrIp\":\"0.0.0.0/0\",\"IpProtocol\":\"-1\"}]}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "EC2IAMRole-IMPORT_COMPLETE-2020-07-13T14:33:35.764Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "EC2IAMRole",
+            "PhysicalResourceId": "demo-web-IAMRole",
+            "ResourceType": "AWS::IAM::Role",
+            "Timestamp": "2020-07-13T14:33:35.764000+00:00",
+            "ResourceStatus": "IMPORT_COMPLETE",
+            "ResourceStatusReason": "Resource import completed.",
+            "ResourceProperties": "{\"Path\":\"/\",\"ManagedPolicyArns\":[\"arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM\",\"arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess\"],\"RoleName\":\"demo-web-IAMRole\",\"AssumeRolePolicyDocument\":{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"sts:AssumeRole\"],\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"ec2.amazonaws.com\"]}}]}}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "WebSecurityGroup-UPDATE_IN_PROGRESS-2020-07-13T14:33:35.752Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "WebSecurityGroup",
+            "PhysicalResourceId": "sg-048fd398745eef3f5",
+            "ResourceType": "AWS::EC2::SecurityGroup",
+            "Timestamp": "2020-07-13T14:33:35.752000+00:00",
+            "ResourceStatus": "UPDATE_IN_PROGRESS",
+            "ResourceStatusReason": "Apply stack-level tags to imported resource if applicable.",
+            "ResourceProperties": "{\"GroupName\":\"demo-web-sg\",\"GroupDescription\":\"-\",\"VpcId\":\"vpc-062a947d9ca295353\",\"Tags\":[{\"Value\":\"demo-web-sg\",\"Key\":\"Name\"}]}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "EC2IAMRole-IMPORT_IN_PROGRESS-2020-07-13T14:33:35.341Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "EC2IAMRole",
+            "PhysicalResourceId": "demo-web-IAMRole",
+            "ResourceType": "AWS::IAM::Role",
+            "Timestamp": "2020-07-13T14:33:35.341000+00:00",
+            "ResourceStatus": "IMPORT_IN_PROGRESS",
+            "ResourceProperties": "{\"Path\":\"/\",\"ManagedPolicyArns\":[\"arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM\",\"arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess\"],\"RoleName\":\"demo-web-IAMRole\",\"AssumeRolePolicyDocument\":{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"sts:AssumeRole\"],\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"ec2.amazonaws.com\"]}}]}}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "ManagedSecurityGroup-IMPORT_COMPLETE-2020-07-13T14:33:34.996Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "ManagedSecurityGroup",
+            "PhysicalResourceId": "sg-0fe69d6cd905ecd59",
+            "ResourceType": "AWS::EC2::SecurityGroup",
+            "Timestamp": "2020-07-13T14:33:34.996000+00:00",
+            "ResourceStatus": "IMPORT_COMPLETE",
+            "ResourceStatusReason": "Resource import completed.",
+            "ResourceProperties": "{\"GroupName\":\"demo-managed-sg\",\"GroupDescription\":\"-\",\"VpcId\":\"vpc-062a947d9ca295353\",\"SecurityGroupIngress\":[{\"CidrIp\":\"0.0.0.0/0\",\"FromPort\":\"22\",\"ToPort\":\"22\",\"IpProtocol\":\"tcp\"}],\"Tags\":[{\"Value\":\"demo-managed-sg\",\"Key\":\"Name\"}],\"SecurityGroupEgress\":[{\"CidrIp\":\"0.0.0.0/0\",\"IpProtocol\":\"-1\"}]}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "WebSecurityGroup-IMPORT_COMPLETE-2020-07-13T14:33:34.802Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "WebSecurityGroup",
+            "PhysicalResourceId": "sg-048fd398745eef3f5",
+            "ResourceType": "AWS::EC2::SecurityGroup",
+            "Timestamp": "2020-07-13T14:33:34.802000+00:00",
+            "ResourceStatus": "IMPORT_COMPLETE",
+            "ResourceStatusReason": "Resource import completed.",
+            "ResourceProperties": "{\"GroupName\":\"demo-web-sg\",\"GroupDescription\":\"-\",\"VpcId\":\"vpc-062a947d9ca295353\",\"Tags\":[{\"Value\":\"demo-web-sg\",\"Key\":\"Name\"}]}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "WebSecurityGroup-IMPORT_IN_PROGRESS-2020-07-13T14:33:34.434Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "WebSecurityGroup",
+            "PhysicalResourceId": "sg-048fd398745eef3f5",
+            "ResourceType": "AWS::EC2::SecurityGroup",
+            "Timestamp": "2020-07-13T14:33:34.434000+00:00",
+            "ResourceStatus": "IMPORT_IN_PROGRESS",
+            "ResourceProperties": "{\"GroupName\":\"demo-web-sg\",\"GroupDescription\":\"-\",\"VpcId\":\"vpc-062a947d9ca295353\",\"Tags\":[{\"Value\":\"demo-web-sg\",\"Key\":\"Name\"}]}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "ManagedSecurityGroup-IMPORT_IN_PROGRESS-2020-07-13T14:33:34.271Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "ManagedSecurityGroup",
+            "PhysicalResourceId": "sg-0fe69d6cd905ecd59",
+            "ResourceType": "AWS::EC2::SecurityGroup",
+            "Timestamp": "2020-07-13T14:33:34.271000+00:00",
+            "ResourceStatus": "IMPORT_IN_PROGRESS",
+            "ResourceProperties": "{\"GroupName\":\"demo-managed-sg\",\"GroupDescription\":\"-\",\"VpcId\":\"vpc-062a947d9ca295353\",\"SecurityGroupIngress\":[{\"CidrIp\":\"0.0.0.0/0\",\"FromPort\":\"22\",\"ToPort\":\"22\",\"IpProtocol\":\"tcp\"}],\"Tags\":[{\"Value\":\"demo-managed-sg\",\"Key\":\"Name\"}],\"SecurityGroupEgress\":[{\"CidrIp\":\"0.0.0.0/0\",\"IpProtocol\":\"-1\"}]}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "WebSecurityGroup-IMPORT_IN_PROGRESS-2020-07-13T14:33:33.908Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "WebSecurityGroup",
+            "PhysicalResourceId": "",
+            "ResourceType": "AWS::EC2::SecurityGroup",
+            "Timestamp": "2020-07-13T14:33:33.908000+00:00",
+            "ResourceStatus": "IMPORT_IN_PROGRESS",
+            "ResourceStatusReason": "Resource import started.",
+            "ResourceProperties": "{\"GroupName\":\"demo-web-sg\",\"GroupDescription\":\"-\",\"VpcId\":\"vpc-062a947d9ca295353\",\"Tags\":[{\"Value\":\"demo-web-sg\",\"Key\":\"Name\"}]}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "EC2IAMRole-IMPORT_IN_PROGRESS-2020-07-13T14:33:33.710Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "EC2IAMRole",
+            "PhysicalResourceId": "",
+            "ResourceType": "AWS::IAM::Role",
+            "Timestamp": "2020-07-13T14:33:33.710000+00:00",
+            "ResourceStatus": "IMPORT_IN_PROGRESS",
+            "ResourceStatusReason": "Resource import started.",
+            "ResourceProperties": "{\"Path\":\"/\",\"ManagedPolicyArns\":[\"arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM\",\"arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess\"],\"RoleName\":\"demo-web-IAMRole\",\"AssumeRolePolicyDocument\":{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"sts:AssumeRole\"],\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"ec2.amazonaws.com\"]}}]}}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "ManagedSecurityGroup-IMPORT_IN_PROGRESS-2020-07-13T14:33:33.702Z",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "ManagedSecurityGroup",
+            "PhysicalResourceId": "",
+            "ResourceType": "AWS::EC2::SecurityGroup",
+            "Timestamp": "2020-07-13T14:33:33.702000+00:00",
+            "ResourceStatus": "IMPORT_IN_PROGRESS",
+            "ResourceStatusReason": "Resource import started.",
+            "ResourceProperties": "{\"GroupName\":\"demo-managed-sg\",\"GroupDescription\":\"-\",\"VpcId\":\"vpc-062a947d9ca295353\",\"SecurityGroupIngress\":[{\"CidrIp\":\"0.0.0.0/0\",\"FromPort\":\"22\",\"ToPort\":\"22\",\"IpProtocol\":\"tcp\"}],\"Tags\":[{\"Value\":\"demo-managed-sg\",\"Key\":\"Name\"}],\"SecurityGroupEgress\":[{\"CidrIp\":\"0.0.0.0/0\",\"IpProtocol\":\"-1\"}]}",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "d26c7610-c515-11ea-a932-0ef015a9ecfc",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "tutorial-demo-ec2-web-server-template",
+            "PhysicalResourceId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "ResourceType": "AWS::CloudFormation::Stack",
+            "Timestamp": "2020-07-13T14:33:30.328000+00:00",
+            "ResourceStatus": "IMPORT_IN_PROGRESS",
+            "ResourceStatusReason": "User Initiated",
+            "ClientRequestToken": "Console-ExecuteChangeSet-b00403f0-2125-7ab0-4be4-0c5345396add"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "EventId": "8d5f6b00-c514-11ea-9c35-06680f8688ee",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "LogicalResourceId": "tutorial-demo-ec2-web-server-template",
+            "PhysicalResourceId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "ResourceType": "AWS::CloudFormation::Stack",
+            "Timestamp": "2020-07-13T14:24:25.275000+00:00",
+            "ResourceStatus": "REVIEW_IN_PROGRESS",
+            "ResourceStatusReason": "User Initiated"
+        }
+    ]
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-demo-ec2-web-server-template
+process exited with code: 0
+stack name: tutorial-demo-ec2-web-server-template
+task is sucessful.
+
+Waiter StackUpdateComplete failed: Waiter encountered a terminal failure state
+
+
+An error occurred (ChangeSetNotFound) when calling the DescribeChangeSet operation: ChangeSet [future-ticket-0001] does not exist
+
+process exited with code: 1
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation wait stack-update-complete                                     --stack-name tutorial-demo-ec2-web-server-template                                     --region ap-northeast-1
+                        } || {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation describe-change-set                                     --change-set-name future-ticket-0001                                     --stack-name tutorial-demo-ec2-web-server-template                                     --region ap-northeast-1
+                            exit 1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 52875 22",
+    "OLDPWD": "/home/vagrant/app/lib/aws-cfn/template",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 52875 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "demo.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-demo-ec2-web-server-template
+{
+    "Id": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/6da5abff-3ef0-4ca7-86cf-04b593dc90cf",
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a"
+}
+
+stack name: tutorial-demo-ec2-web-server-template
+
+Waiter StackUpdateComplete failed: Waiter encountered a terminal failure state
+
+{
+    "Changes": [
+        {
+            "Type": "Resource",
+            "ResourceChange": {
+                "Action": "Modify",
+                "LogicalResourceId": "EC2IAMRole",
+                "PhysicalResourceId": "demo-web-IAMRole",
+                "ResourceType": "AWS::IAM::Role",
+                "Replacement": "True",
+                "Scope": [
+                    "Properties"
+                ],
+                "Details": [
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "RoleName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "RoleName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "RoleName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "Resource",
+            "ResourceChange": {
+                "Action": "Modify",
+                "LogicalResourceId": "EC2InstanceProfile",
+                "PhysicalResourceId": "demo-web-InstanceProfile",
+                "ResourceType": "AWS::IAM::InstanceProfile",
+                "Replacement": "True",
+                "Scope": [
+                    "Properties"
+                ],
+                "Details": [
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "Roles",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ResourceReference",
+                        "CausingEntity": "EC2IAMRole"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "InstanceProfileName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "InstanceProfileName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "InstanceProfileName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "Resource",
+            "ResourceChange": {
+                "Action": "Modify",
+                "LogicalResourceId": "EC2Instance",
+                "PhysicalResourceId": "i-0cd090ec1f134c234",
+                "ResourceType": "AWS::EC2::Instance",
+                "Replacement": "Conditional",
+                "Scope": [
+                    "Properties",
+                    "Tags"
+                ],
+                "Details": [
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "IamInstanceProfile",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ResourceReference",
+                        "CausingEntity": "EC2InstanceProfile"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "SecurityGroupIds",
+                            "RequiresRecreation": "Conditionally"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ResourceReference",
+                        "CausingEntity": "ManagedSecurityGroup"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "SecurityGroupIds",
+                            "RequiresRecreation": "Conditionally"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ResourceReference",
+                        "CausingEntity": "WebSecurityGroup"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "Resource",
+            "ResourceChange": {
+                "Action": "Modify",
+                "LogicalResourceId": "ManagedSecurityGroup",
+                "PhysicalResourceId": "sg-0fe69d6cd905ecd59",
+                "ResourceType": "AWS::EC2::SecurityGroup",
+                "Replacement": "True",
+                "Scope": [
+                    "Properties",
+                    "Tags"
+                ],
+                "Details": [
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    },
+                    {
+                        "Target"
+: {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "Resource",
+            "ResourceChange": {
+                "Action": "Modify",
+                "LogicalResourceId": "WebSecurityGroup",
+                "PhysicalResourceId": "sg-048fd398745eef3f5",
+                "ResourceType": "AWS::EC2::SecurityGroup",
+                "Replacement": "True",
+                "Scope": [
+                    "Properties",
+                    "Tags"
+                ],
+                "Details": [
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "Environment"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Tags",
+                            "RequiresRecreation": "Never"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Static",
+                        "ChangeSource": "ParameterReference",
+                        "CausingEntity": "PJPrefix"
+                    },
+                    {
+                        "Target": {
+                            "Attribute": "Properties",
+                            "Name": "GroupName",
+                            "RequiresRecreation": "Always"
+                        },
+                        "Evaluation": "Dynamic",
+                        "ChangeSource": "DirectModification"
+                    }
+                ]
+            }
+        }
+    ],
+    "ChangeSetName": "future-ticket-0001",
+    "ChangeSetId": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/6da5abff-3ef0-4ca7-86cf-04b593dc90cf",
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+    "StackName": "tutorial-demo-ec2-web-server-template",
+    "Description": null,
+    "Parameters": [
+        {
+            "ParameterKey": "CompanyPrefix",
+            "ParameterValue": "ar"
+        },
+        {
+            "ParameterKey": "EC2InstanceName",
+            "ParameterValue": "web"
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeSize",
+            "ParameterValue": "8"
+        },
+        {
+            "ParameterKey": "EC2InstanceAMI",
+            "ParameterValue": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2",
+            "ResolvedValue": "ami-06ad9296e6cf1e3cf"
+        },
+        {
+            "ParameterKey": "SSHAccessSourceIP",
+            "ParameterValue": "0.0.0.0/0"
+        },
+        {
+            "ParameterKey": "PJPrefix",
+            "ParameterValue": "tutorial"
+        },
+        {
+            "ParameterKey": "Environment",
+            "ParameterValue": "demo"
+        },
+        {
+            "ParameterKey": "EC2InstanceKeyPairName",
+            "ParameterValue": "key"
+        },
+        {
+            "ParameterKey": "EC2InstanceInstanceType",
+            "ParameterValue": "t2.micro"
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeType",
+            "ParameterValue": "gp2"
+        }
+    ],
+    "CreationTime": "2020-07-13T16:09:56.414000+00:00",
+    "ExecutionStatus": "AVAILABLE",
+    "Status": "CREATE_COMPLETE",
+    "StatusReason": null,
+    "NotificationARNs": [],
+    "RollbackConfiguration": {},
+    "Capabilities": [
+        "CAPABILITY_NAMED_IAM"
+    ],
+    "Tags": null
+}
+
+process exited with code: 1
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation wait stack-update-complete                                     --stack-name tutorial-demo-ec2-web-server-template                                     --region ap-northeast-1
+                        } || {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation describe-change-set                                     --change-set-name future-ticket-0001                                     --stack-name tutorial-demo-ec2-web-server-template                                     --region ap-northeast-1
+                            exit 1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "4",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 52875 22",
+    "OLDPWD": "/home/vagrant/app/lib/aws-cfn/template",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 52875 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "demo.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-demo-ec2-web-server-template
+process exited with code: 0
+stack name: tutorial-demo-ec2-web-server-template
+task is sucessful.
+process exited with code: 0
+task is sucessful.

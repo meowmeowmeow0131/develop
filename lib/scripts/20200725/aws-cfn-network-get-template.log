@@ -1,0 +1,69 @@
+stack name: network
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: argument --stack-name: expected one argument
+
+process exited with code: 252
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-network-get-template.log
+############ debug info is cmd, args, options. ############
+cmd: docker
+args: run,--rm,-i,-v,~/app/.aws:/root/.aws,-v,/home/vagrant/app/lib/aws-cfn/stack/network:/var/opt,-w,/var/opt,amazon/aws-cli,cloudformation,get-template,--stack-name,,--region,ap-northeast-1
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/stack/network",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 49717 22",
+    "OLDPWD": "/home/vagrant/app",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 49717 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/stack/network/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAMETER_FILE": "demo.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: network
+{
+    "TemplateBody": "AWSTemplateFormatVersion: \"2010-09-09\"\nDescription:\n  This template is for providing network environment. The availabilityzone suppose A and C.\n\nMetadata:\n  AWS::CloudFormation::Interface:\n    # ??????????????????????\n    ParameterGroups:\n      - Label:\n          default: Name Prefix\n        Parameters:\n          - CompanyPrefix\n          - PJPrefix\n      - Label:\n          default: Network Configuration\n        Parameters:\n          - VPCCIDR\n          - PublicSubnetACIDR\n          - PublicSubnetCCIDR\n          - PrivateSubnetACIDR\n          - PrivateSubnetCCIDR\n    # ?????????????\n    ParameterLabels:\n      VPCCidrBlock:\n        default: VPC CIDR\n      PublicSubnetACIDR:\n        default: Pubric Subnet CIDR at AvailabilityZone A\n      PublicSubnetCCIDR:\n        default: Pubric Subnet CIDR at AvailabilityZone C\n      PrivateSubnetACIDR:\n        default: Private Subnet CIDR at AvailabilityZone A\n      PrivateSubnetCCIDR:\n        default: Private Subnet CIDR at AvailabilityZone C\n\n# ------------------------------------------------------------#\n# Input Parameters\n# ------------------------------------------------------------#\nParameters:\n  CompanyPrefix:\n    Type: String\n  PJPrefix:\n    Type: String\n\n  # VPC\n  VPCCIDR:\n    Type: String\n    Default: 10.2.0.0/16\n\n  # Subnet\n  PublicSubnetACIDR:\n    Type: String\n    Default: 10.2.10.0/24\n  PublicSubnetCCIDR:\n    Type: String\n    Default: 10.2.20.0/24\n  PrivateSubnetACIDR:\n    Type: String\n    Default: 10.2.100.0/24\n  PrivateSubnetCCIDR:\n    Type: String\n    Default: 10.2.200.0/24\n\nResources:\n# ------------------------------------------------------------#\n# VPC\n# ------------------------------------------------------------#\n  VPC: \n    Type: AWS::EC2::VPC\n    Properties:\n      Tags: \n        - Key: Name\n          Value: !Sub ${CompanyPrefix}-vpc\n      CidrBlock: !Ref VPCCIDR\n      EnableDnsSupport: true\n      EnableDnsHostnames: true\n      InstanceTenancy: default\n\n  # IGW\n  InternetGateway:\n    Type: AWS::EC2::InternetGateway\n    Properties:\n      Tags:\n        - Key: Name\n          Value: !Sub ${CompanyPrefix}-igw\n\n  # Attach IGW\n  InternetGatewayAttachment:\n    Type: AWS::EC2::VPCGatewayAttachment\n    Properties:\n      InternetGatewayId: !Ref InternetGateway\n      VpcId: !Ref VPC\n\n# ------------------------------------------------------------#\n# Public Subnet  AZ:A\n# ------------------------------------------------------------#\n  PublicSubnetA:\n    Type: AWS::EC2::Subnet\n    Properties:\n      Tags: \n        - Key: Name\n          Value: !Sub ${CompanyPrefix}-public-subnet-a\n      AvailabilityZone: !Sub ${AWS::Region}a\n      CidrBlock: !Ref PublicSubnetACIDR\n      VpcId: !Ref VPC\n  \n  # RouteTable\n  PublicRouteTableA:\n    Type: AWS::EC2::RouteTable\n    Properties:\n      Tags: \n        - Key: Name\n          Value: !Sub ${CompanyPrefix}-public-route-a\n      VpcId: !Ref VPC\n  \n  # Routing RoutTable\n  PublicRouteA:\n    Type: AWS::EC2::Route\n    Properties:\n      RouteTableId: !Ref PublicRouteTableA\n      DestinationCidrBlock: 0.0.0.0/0\n      GatewayId: !Ref InternetGateway\n  \n  # Associate Subnet, RouteTable\n  PublicSubnetARouteTableAssociation:\n    Type: AWS::EC2::SubnetRouteTableAssociation\n    Properties:\n      SubnetId: !Ref PublicSubnetA\n      RouteTableId: !Ref PublicRouteTableA\n\n# ------------------------------------------------------------#\n# Public Subnet  AZ:C\n# ------------------------------------------------------------#\n  PublicSubnetC:\n    Type: AWS::EC2::Subnet\n    Properties:\n      Tags: \n        - Key: Name\n          Value: !Sub ${CompanyPrefix}-public-subnet-c\n      AvailabilityZone: !Sub ${AWS::Region}c\n      CidrBlock: !Ref PublicSubnetCCIDR\n      VpcId: !Ref VPC\n\n  # RouteTable\n  PublicRouteTableC:\n    Type: AWS::EC2::RouteTable\n    Properties:\n      Tags: \n        - Key: Name\n          Value: !Sub ${CompanyPrefix}-public-route-c\n      VpcId: !Ref VPC\n\n  # Routing RoutTable\n  PublicRouteC:\n    Type: AWS::EC2::Route\n    Properties:\n      RouteTableId: !Ref PublicRouteTableC\n      DestinationCidrBlock: 0.0.0.0/0\n      GatewayId: !Ref InternetGateway\n\n  # Associate Subnet, RouteTable\n  PublicSubnetCRouteTableAssociation:\n    Type: AWS::EC2::SubnetRouteTableAssociation\n    Properties:\n      SubnetId: !Ref PublicSubnetC\n      RouteTableId: !Ref PublicRouteTableC\n\n# ------------------------------------------------------------#\n# Private Subnet  AZ:A\n# ------------------------------------------------------------#\n  PrivateSubnetA:\n    Type: AWS::EC2::Subnet\n    Properties:\n      Tags: \n        - Key: Name\n          Value: !Sub ${CompanyPrefix}-private-subnet-a\n      AvailabilityZone: !Sub ${AWS::Region}a\n      CidrBlock: !Ref PrivateSubnetACIDR\n      VpcId: !Ref VPC\n  \n  # RouteTable\n  PrivateRouteTableA:\n    Type: AWS::EC2::RouteTable\n    Properties:\n      Tags: \n        - Key: Name\n          Value: !Sub ${CompanyPrefix}-private-route-a\n      VpcId: !Ref VPC\n  \n  # Routing RoutTable\n  PrivateRouteA:\n    Type: AWS::EC2::Route\n    Properties:\n      RouteTableId: !Ref PrivateRouteTableA\n      DestinationCidrBlock: 0.0.0.0/0\n      GatewayId: !Ref InternetGateway\n  \n  # Associate Subnet, RouteTable\n  PrivateSubnetARouteTableAssociation:\n    Type: AWS::EC2::SubnetRouteTableAssociation\n    Properties:\n      SubnetId: !Ref PrivateSubnetA\n      RouteTableId: !Ref PrivateRouteTableA\n\n# ------------------------------------------------------------#\n# Private Subnet  AZ:C\n# ------------------------------------------------------------#\n  PrivateSubnetC:\n    Type: AWS::EC2::Subnet\n    Properties:\n      Tags: \n        - Key: Name\n          Value: !Sub ${CompanyPrefix}-private-subnet-c\n      AvailabilityZone: !Sub ${AWS::Region}c\n      CidrBlock: !Ref PrivateSubnetCCIDR\n      VpcId: !Ref VPC\n\n  # RouteTable\n  PrivateRouteTableC:\n    Type: AWS::EC2::RouteTable\n    Properties:\n      Tags: \n        - Key: Name\n          Value: !Sub ${CompanyPrefix}-private-route-c\n      VpcId: !Ref VPC\n\n  # Routing RoutTable\n  PrivateRouteC:\n    Type: AWS::EC2::Route\n    Properties:\n      RouteTableId: !Ref PrivateRouteTableC\n      DestinationCidrBlock: 0.0.0.0/0\n      GatewayId: !Ref InternetGateway\n\n  # Associate Subnet, RouteTable\n  PrivateSubnetCRouteTableAssociation:\n    Type: AWS::EC2::SubnetRouteTableAssociation\n    Properties:\n      SubnetId: !Ref PrivateSubnetC\n      RouteTableId: !Ref PrivateRouteTableC\n\n# ------------------------------------------------------------#\n# ?????????\n# ------------------------------------------------------------#\nOutputs:\n  VPC:\n    Description: \"-\"\n    Value: !Ref VPC\n    Export:\n      Name: !Sub ${CompanyPrefix}-vpc\n  VPCCIDR:\n    Description: \"-\"\n    Value: !Ref VPCCIDR\n    Export:\n      Name: !Sub ${CompanyPrefix}-vpc-cidr\n  PublicSubnetA:\n    Description: \"-\"\n    Value: !Ref PublicSubnetA\n    Export:\n      Name: !Sub ${CompanyPrefix}-public-subnet-a\n  PublicSubnetACIDR:\n    Description: \"-\"\n    Value: !Ref PublicSubnetACIDR\n    Export:\n      Name: !Sub ${CompanyPrefix}-public-subnet-a-cidr\n  PublicSubnetC:\n    Description: \"-\"\n    Value: PublicSubnetC\n    Export:\n      Name: !Sub ${CompanyPrefix}-public-subnet-c\n  PublicSubnetCCIDR:\n    Description: \"-\"\n    Value: !Ref PublicSubnetCCIDR\n    Export:\n      Name: !Sub ${CompanyPrefix}-public-subnet-c-cidr\n  PrivateSubnetA:\n    Description: \"-\"\n    Value: !Ref PrivateSubnetA\n    Export:\n      Name: !Sub ${CompanyPrefix}-private-subnet-a\n  PrivateSubnetACIDR:\n    Description: \"-\"\n    Value: !Ref PrivateSubnetACIDR\n    Export:\n      Name: !Sub ${CompanyPrefix}-private-subnet-a-cidr\n  PrivateSubnetC:\n    Description: \"-\"\n    Value: !Ref PrivateSubnetC\n    Export:\n      Name: !Sub ${CompanyPrefix}-private-subnet-c\n  PrivateSubnetCCIDR:\n    Description: \"-\"\n    Value: !Ref PrivateSubnetCCIDR\n    Export:\n      Name: !Sub ${CompanyPrefix}-private-subnet-c-cidr\n  PublicRouteTableA:\n    Description: \"-\"\n    Value: !Ref PublicRouteTableA\n    Export:\n      Name: !Sub ${CompanyPrefix}-public-route-a\n  PublicRouteTableC:\n    Description: \"-\"\n    Value: !Ref PublicRouteTableC\n    Export:\n      Name: !Sub ${CompanyPrefix}-public-route-c\n  PrivateRouteTableA:\n    Description: \"-\"\n    Value: !Ref PrivateRouteTableA\n    Export:\n      Name: !Sub ${CompanyPrefix}-private-route-a\n  PrivateRouteTableC:\n    Description: \"-\"\n    Value: !Ref PrivateRouteTableC\n    Export:\n      Name: !Sub ${CompanyPrefix}-private-route-c\n",
+    "StagesAvailable": [
+        "Original",
+        "Processed"
+    ]
+}
+
+process exited with code: 0
+task is sucessful.

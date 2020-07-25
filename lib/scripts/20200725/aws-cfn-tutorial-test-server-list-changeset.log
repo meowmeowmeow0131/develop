@@ -1,0 +1,18 @@
+stack name: tutorial-test-server
+{
+    "Summaries": [
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-test-server/f408d8c0-b0ae-11ea-8eb1-0af1581a9dde",
+            "StackName": "tutorial-test-server",
+            "ChangeSetId": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/dc0eda92-c613-4524-977f-430fae4e55c6",
+            "ChangeSetName": "future-ticket-0001",
+            "ExecutionStatus": "AVAILABLE",
+            "Status": "CREATE_COMPLETE",
+            "CreationTime": "2020-06-18T16:35:11.598000+00:00",
+            "Description": "Created by AWS CLI at 2020/06/18 16:34:38.828 JST"
+        }
+    ]
+}
+
+process exited with code: 0
+task is sucessful.

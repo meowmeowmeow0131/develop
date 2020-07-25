@@ -1,0 +1,1544 @@
+stack name: tutorial-demo-ec2-web-server-template
+{
+    "Parameters": [
+        {
+            "ParameterKey": "CompanyPrefix",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceServiceName",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeSize",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceAMI",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "SSHAccessSourceIP",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "PJPrefix",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "Environment",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceKeyPairName",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceInstanceType",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeType",
+            "NoEcho": false
+        }
+    ],
+    "Description": "???????EC2????????????????????????????????????????AMI,????????????????????? ??????????Web?????????????",
+    "Capabilities": [
+        "CAPABILITY_NAMED_IAM"
+    ],
+    "CapabilitiesReason": "The following resource(s) require capabilities: [AWS::IAM::Role]"
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-demo-ec2-web-server-template
+{
+    "Id": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/cea0fe24-3896-4209-ae4a-b66d29fc6f63",
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a"
+}
+
+process exited with code: 0
+stack name: tutorial-demo-ec2-web-server-template
+task is sucessful.
+process exited with code: 0
+stack name: tutorial-demo-ec2-web-server-template
+task is sucessful.
+{
+    "Summaries": [
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-ec2-web-server-template/289d80d0-c514-11ea-8ab6-06255f79192a",
+            "StackName": "tutorial-demo-ec2-web-server-template",
+            "ChangeSetId": "arn:aws:cloudformation:ap-northeast-1:651438125238:changeSet/future-ticket-0001/cea0fe24-3896-4209-ae4a-b66d29fc6f63",
+            "ChangeSetName": "future-ticket-0001",
+            "ExecutionStatus": "AVAILABLE",
+            "Status": "CREATE_COMPLETE",
+            "CreationTime": "2020-07-16T17:20:57.028000+00:00"
+        }
+    ]
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-demo-ec2-web-server-template
+process exited with code: 0
+stack name: tutorial-demo-ec2-web-server-template
+task is sucessful.
+
+An error occurred (ChangeSetNotFound) when calling the DescribeChangeSet operation: ChangeSet [future-ticket-0001] does not exist
+
+process exited with code: 254
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation describe-change-set                                     --change-set-name future-ticket-0001                                     --stack-name tutorial-demo-ec2-web-server-template                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "demo.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-demo-ec2-web-server-template
+{
+    "StackSummaries": [
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-iam-user-cfn-template/abd22c10-c6a6-11ea-895f-0ac3b391d020",
+            "StackName": "tutorial-demo-iam-user-cfn-template",
+            "TemplateDescription": "IAM User for cloudformation",
+            "CreationTime": "2020-07-15T14:22:53.940000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-python-app/8cdd2240-ac13-11ea-8ad8-0a9b6e22c78e",
+            "StackName": "tutorial-python-app",
+            "TemplateDescription": "tutorial-python-app\nSample SAM Template for tutorial-python-app\n",
+            "CreationTime": "2020-06-11T18:44:15.673000+00:00",
+            "LastUpdatedTime": "2020-06-11T18:44:26.596000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/lambda-bucket/444333e0-92cc-11ea-b75f-0a62df4444de",
+            "StackName": "lambda-bucket",
+            "TemplateDescription": "s3 bucket billing for cloudformation template for stack",
+            "CreationTime": "2020-05-10T14:41:00.523000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/NotifyBillingToSlack/e6dec5e0-2960-11ea-a257-0a6f9c86115e",
+            "StackName": "NotifyBillingToSlack",
+            "TemplateDescription": "Notify Slack every day of AWS billing",
+            "CreationTime": "2019-12-28T10:57:55.553000+00:00",
+            "LastUpdatedTime": "2019-12-28T10:58:00.977000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        }
+    ]
+}
+
+process exited with code: 0
+stack name: tutorial-demo-ec2-web-server-template
+task is sucessful.
+stack name: tutorial-demo-ec2-web-server-template
+
+An error occurred (ValidationError) when calling the CreateStack operation: Parameter 'Environment' must be one of AllowedValues
+
+stack name: tutorial-poc-ec2-web-server-template
+
+An error occurred (ValidationError) when calling the CreateStack operation: Parameter 'Environment' must be one of AllowedValues
+
+process exited with code: 254
+stack name: tutorial-poc-ec2-web-server-template
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation create-stack                                     --template-body file://template.yaml                                     --cli-input-json file://poc.json                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+
+Waiter StackCreateComplete failed: Waiter encountered a terminal failure state
+
+process exited with code: 255
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation wait stack-create-complete                                     --stack-name tutorial-poc-ec2-web-server-template                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-poc-ec2-web-server-template
+{
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-poc-ec2-web-server-template/fd372ff0-c78d-11ea-bf22-0ae3ffe7265e"
+}
+
+process exited with code: 0
+stack name: tutorial-poc-ec2-web-server-template
+task is sucessful.
+
+Waiter StackCreateComplete failed: Waiter encountered a terminal failure state
+
+process exited with code: 255
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation wait stack-create-complete                                     --stack-name tutorial-poc-ec2-web-server-template                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-poc-ec2-web-server-template
+
+An error occurred (AlreadyExistsException) when calling the CreateStack operation: Stack [tutorial-poc-ec2-web-server-template] already exists
+
+process exited with code: 254
+stack name: tutorial-poc-ec2-web-server-template
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation create-stack                                     --template-body file://template.yaml                                     --cli-input-json file://poc.json                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+
+Waiter StackCreateComplete failed: Waiter encountered a terminal failure state
+
+process exited with code: 255
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation wait stack-create-complete                                     --stack-name tutorial-poc-ec2-web-server-template                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-poc-ec2-web-server-template
+{
+    "StackSummaries": [
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-iam-user-cfn-template/abd22c10-c6a6-11ea-895f-0ac3b391d020",
+            "StackName": "tutorial-demo-iam-user-cfn-template",
+            "TemplateDescription": "IAM User for cloudformation",
+            "CreationTime": "2020-07-15T14:22:53.940000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-python-app/8cdd2240-ac13-11ea-8ad8-0a9b6e22c78e",
+            "StackName": "tutorial-python-app",
+            "TemplateDescription": "tutorial-python-app\nSample SAM Template for tutorial-python-app\n",
+            "CreationTime": "2020-06-11T18:44:15.673000+00:00",
+            "LastUpdatedTime": "2020-06-11T18:44:26.596000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/lambda-bucket/444333e0-92cc-11ea-b75f-0a62df4444de",
+            "StackName": "lambda-bucket",
+            "TemplateDescription": "s3 bucket billing for cloudformation template for stack",
+            "CreationTime": "2020-05-10T14:41:00.523000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/NotifyBillingToSlack/e6dec5e0-2960-11ea-a257-0a6f9c86115e",
+            "StackName": "NotifyBillingToSlack",
+            "TemplateDescription": "Notify Slack every day of AWS billing",
+            "CreationTime": "2019-12-28T10:57:55.553000+00:00",
+            "LastUpdatedTime": "2019-12-28T10:58:00.977000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        }
+    ]
+}
+
+process exited with code: 0
+stack name: tutorial-poc-ec2-web-server-template
+task is sucessful.
+stack name: tutorial-poc-ec2-web-server-template
+{
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-poc-ec2-web-server-template/036590a0-c78f-11ea-a0d8-0ab0e844d044"
+}
+
+process exited with code: 0
+stack name: tutorial-poc-ec2-web-server-template
+task is sucessful.
+
+Waiter StackCreateComplete failed: Waiter encountered a terminal failure state
+
+process exited with code: 255
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation wait stack-create-complete                                     --stack-name tutorial-poc-ec2-web-server-template                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-poc-ec2-web-server-template
+{
+    "StackSummaries": [
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-iam-user-cfn-template/abd22c10-c6a6-11ea-895f-0ac3b391d020",
+            "StackName": "tutorial-demo-iam-user-cfn-template",
+            "TemplateDescription": "IAM User for cloudformation",
+            "CreationTime": "2020-07-15T14:22:53.940000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-python-app/8cdd2240-ac13-11ea-8ad8-0a9b6e22c78e",
+            "StackName": "tutorial-python-app",
+            "TemplateDescription": "tutorial-python-app\nSample SAM Template for tutorial-python-app\n",
+            "CreationTime": "2020-06-11T18:44:15.673000+00:00",
+            "LastUpdatedTime": "2020-06-11T18:44:26.596000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/lambda-bucket/444333e0-92cc-11ea-b75f-0a62df4444de",
+            "StackName": "lambda-bucket",
+            "TemplateDescription": "s3 bucket billing for cloudformation template for stack",
+            "CreationTime": "2020-05-10T14:41:00.523000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/NotifyBillingToSlack/e6dec5e0-2960-11ea-a257-0a6f9c86115e",
+            "StackName": "NotifyBillingToSlack",
+            "TemplateDescription": "Notify Slack every day of AWS billing",
+            "CreationTime": "2019-12-28T10:57:55.553000+00:00",
+            "LastUpdatedTime": "2019-12-28T10:58:00.977000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        }
+    ]
+}
+
+process exited with code: 0
+stack name: tutorial-poc-ec2-web-server-template
+task is sucessful.
+stack name: tutorial-poc-ec2-web-server-template
+{
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-poc-ec2-web-server-template/601e9850-c78f-11ea-8dc8-061efcb8d5d0"
+}
+
+process exited with code: 0
+stack name: tutorial-poc-ec2-web-server-template
+task is sucessful.
+
+Waiter StackCreateComplete failed: Waiter encountered a terminal failure state
+
+process exited with code: 255
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation wait stack-create-complete                                     --stack-name tutorial-poc-ec2-web-server-template                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-poc-ec2-web-server-template
+
+An error occurred (ValidationError) when calling the CreateChangeSet operation: Stack:arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-poc-ec2-web-server-template/601e9850-c78f-11ea-8dc8-061efcb8d5d0 is in ROLLBACK_COMPLETE state and can not be updated.
+
+process exited with code: 254
+stack name: tutorial-poc-ec2-web-server-template
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation create-change-set                                     --change-set-name future-ticket-0001                                     --template-body file://template.yaml                                     --cli-input-json file://poc.json                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+
+Waiter ChangeSetCreateComplete failed: ChangeSet [future-ticket-0001] does not exist
+
+
+An error occurred (ChangeSetNotFound) when calling the DescribeChangeSet operation: ChangeSet [future-ticket-0001] does not exist
+
+process exited with code: 1
+stack name: tutorial-poc-ec2-web-server-template
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation wait change-set-create-complete                                     --change-set-name future-ticket-0001                                     --stack-name tutorial-poc-ec2-web-server-template                                     --region ap-northeast-1
+                        } || {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation describe-change-set                                     --change-set-name future-ticket-0001                                     --stack-name tutorial-poc-ec2-web-server-template                                     --region ap-northeast-1
+                            exit 1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+{
+    "Summaries": []
+}
+
+process exited with code: 0
+task is sucessful.
+stack name: tutorial-poc-ec2-web-server-template
+{
+    "StackSummaries": [
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-iam-user-cfn-template/abd22c10-c6a6-11ea-895f-0ac3b391d020",
+            "StackName": "tutorial-demo-iam-user-cfn-template",
+            "TemplateDescription": "IAM User for cloudformation",
+            "CreationTime": "2020-07-15T14:22:53.940000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-python-app/8cdd2240-ac13-11ea-8ad8-0a9b6e22c78e",
+            "StackName": "tutorial-python-app",
+            "TemplateDescription": "tutorial-python-app\nSample SAM Template for tutorial-python-app\n",
+            "CreationTime": "2020-06-11T18:44:15.673000+00:00",
+            "LastUpdatedTime": "2020-06-11T18:44:26.596000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/lambda-bucket/444333e0-92cc-11ea-b75f-0a62df4444de",
+            "StackName": "lambda-bucket",
+            "TemplateDescription": "s3 bucket billing for cloudformation template for stack",
+            "CreationTime": "2020-05-10T14:41:00.523000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/NotifyBillingToSlack/e6dec5e0-2960-11ea-a257-0a6f9c86115e",
+            "StackName": "NotifyBillingToSlack",
+            "TemplateDescription": "Notify Slack every day of AWS billing",
+            "CreationTime": "2019-12-28T10:57:55.553000+00:00",
+            "LastUpdatedTime": "2019-12-28T10:58:00.977000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        }
+    ]
+}
+
+process exited with code: 0
+stack name: tutorial-poc-ec2-web-server-template
+task is sucessful.
+stack name: tutorial-poc-ec2-web-server-template
+
+An error occurred (ValidationError) when calling the CreateChangeSet operation: Stack [tutorial-poc-ec2-web-server-template] does not exist
+
+process exited with code: 254
+stack name: tutorial-poc-ec2-web-server-template
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation create-change-set                                     --change-set-name future-ticket-0001                                     --template-body file://template.yaml                                     --cli-input-json file://poc.json                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+
+Waiter ChangeSetCreateComplete failed: Waiter encountered a terminal failure state
+
+
+An error occurred (ValidationError) when calling the DescribeChangeSet operation: Stack [tutorial-poc-ec2-web-server-template] does not exist
+
+process exited with code: 1
+stack name: tutorial-poc-ec2-web-server-template
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation wait change-set-create-complete                                     --change-set-name future-ticket-0001                                     --stack-name tutorial-poc-ec2-web-server-template                                     --region ap-northeast-1
+                        } || {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation describe-change-set                                     --change-set-name future-ticket-0001                                     --stack-name tutorial-poc-ec2-web-server-template                                     --region ap-northeast-1
+                            exit 1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+
+An error occurred (ValidationError) when calling the ListChangeSets operation: Stack [tutorial-poc-ec2-web-server-template] does not exist
+
+process exited with code: 254
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation list-change-sets                                     --stack-name tutorial-poc-ec2-web-server-template                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-poc-ec2-web-server-template
+{
+    "StackSummaries": [
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-demo-iam-user-cfn-template/abd22c10-c6a6-11ea-895f-0ac3b391d020",
+            "StackName": "tutorial-demo-iam-user-cfn-template",
+            "TemplateDescription": "IAM User for cloudformation",
+            "CreationTime": "2020-07-15T14:22:53.940000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-python-app/8cdd2240-ac13-11ea-8ad8-0a9b6e22c78e",
+            "StackName": "tutorial-python-app",
+            "TemplateDescription": "tutorial-python-app\nSample SAM Template for tutorial-python-app\n",
+            "CreationTime": "2020-06-11T18:44:15.673000+00:00",
+            "LastUpdatedTime": "2020-06-11T18:44:26.596000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/lambda-bucket/444333e0-92cc-11ea-b75f-0a62df4444de",
+            "StackName": "lambda-bucket",
+            "TemplateDescription": "s3 bucket billing for cloudformation template for stack",
+            "CreationTime": "2020-05-10T14:41:00.523000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/NotifyBillingToSlack/e6dec5e0-2960-11ea-a257-0a6f9c86115e",
+            "StackName": "NotifyBillingToSlack",
+            "TemplateDescription": "Notify Slack every day of AWS billing",
+            "CreationTime": "2019-12-28T10:57:55.553000+00:00",
+            "LastUpdatedTime": "2019-12-28T10:58:00.977000+00:00",
+            "StackStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        }
+    ]
+}
+
+process exited with code: 0
+stack name: tutorial-poc-ec2-web-server-template
+task is sucessful.
+stack name: tutorial-poc-ec2-web-server-template
+{
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-poc-ec2-web-server-template/541c2490-c790-11ea-b1ee-0e08659c816c"
+}
+
+process exited with code: 0
+stack name: tutorial-poc-ec2-web-server-template
+task is sucessful.
+
+Waiter StackCreateComplete failed: Waiter encountered a terminal failure state
+
+process exited with code: 255
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation wait stack-create-complete                                     --stack-name tutorial-poc-ec2-web-server-template                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-poc-ec2-web-server-template
+{
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-poc-ec2-web-server-template/fe3329e0-c792-11ea-bfdf-0e42406983d0"
+}
+
+process exited with code: 0
+stack name: tutorial-poc-ec2-web-server-template
+task is sucessful.
+
+Waiter StackCreateComplete failed: Waiter encountered a terminal failure state
+
+process exited with code: 255
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation wait stack-create-complete                                     --stack-name tutorial-poc-ec2-web-server-template                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-poc-ec2-web-server-template
+{
+    "StackId": "arn:aws:cloudformation:ap-northeast-1:651438125238:stack/tutorial-poc-ec2-web-server-template/d6addd60-c793-11ea-b7f7-063a64457ffa"
+}
+
+process exited with code: 0
+stack name: tutorial-poc-ec2-web-server-template
+task is sucessful.
+
+Waiter StackCreateComplete failed: Waiter encountered a terminal failure state
+
+process exited with code: 255
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation wait stack-create-complete                                     --stack-name tutorial-poc-ec2-web-server-template                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-poc-ec2-web-server-template
+
+An error occurred (ValidationError) when calling the CreateStack operation: Circular dependency between resources: [EC2NetworkInterfaceAttachment, EC2Instance, EC2VolumeAttachment]
+
+process exited with code: 254
+stack name: tutorial-poc-ec2-web-server-template
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation create-stack                                     --template-body file://template.yaml                                     --cli-input-json file://poc.json                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+
+Waiter StackCreateComplete failed: Waiter encountered a terminal failure state
+
+process exited with code: 255
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation wait stack-create-complete                                     --stack-name tutorial-poc-ec2-web-server-template                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+stack name: tutorial-poc-ec2-web-server-template
+
+An error occurred (ValidationError) when calling the CreateStack operation: Circular dependency between resources: [EC2NetworkInterfaceAttachment, EC2Instance, EC2VolumeAttachment]
+
+process exited with code: 254
+stack name: tutorial-poc-ec2-web-server-template
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation create-stack                                     --template-body file://template.yaml                                     --cli-input-json file://poc.json                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}
+
+Waiter StackCreateComplete failed: Waiter encountered a terminal failure state
+
+process exited with code: 255
+task is failed.
+debug info is writed: /home/vagrant/app/log/aws-cfn-ec2-web-server-template.log
+############ debug info is cmd, args, options. ############
+cmd: eval
+args: 
+                        {
+                            docker run --rm -i                                 -v ~/app/.aws:/root/.aws                                 -v /home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template:/var/opt                                 -w /var/opt                                 amazon/aws-cli cloudformation wait stack-create-complete                                     --stack-name tutorial-poc-ec2-web-server-template                                     --region ap-northeast-1
+                        }
+                    
+options: 
+{
+  "cwd": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template",
+  "env": {
+    "NVM_INC": "/home/vagrant/.nvm/versions/node/v12.18.0/include/node",
+    "XDG_SESSION_ID": "10",
+    "NVM_CD_FLAGS": "",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "SSH_CLIENT": "10.0.2.2 59801 22",
+    "OLDPWD": "/home/vagrant",
+    "SSH_TTY": "/dev/pts/0",
+    "NVM_DIR": "/home/vagrant/.nvm",
+    "USER": "vagrant",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "MAIL": "/var/mail/vagrant",
+    "PATH": "/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.nvm/versions/node/v12.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PWD": "/home/vagrant/app/lib/aws-cfn",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/vagrant",
+    "LOGNAME": "vagrant",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "SSH_CONNECTION": "10.0.2.2 59801 10.0.2.15 22",
+    "NVM_BIN": "/home/vagrant/.nvm/versions/node/v12.18.0/bin",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "_": "/home/vagrant/.nvm/versions/node/v12.18.0/bin/gulp",
+    "INIT_CWD": "/home/vagrant/app/lib/aws-cfn",
+    "ENV_FILE": "/home/vagrant/app/lib/aws-cfn/template/ec2-web-server-template/.env",
+    "RESOURCE_PERMISSION": "CAPABILITY_NAMED_IAM",
+    "AWS_REGION": "ap-northeast-1",
+    "AWS_CLI_DOCKER_IMAGE": "amazon/aws-cli",
+    "TEMPLATE_FILE": "template.yaml",
+    "PARAM_FILE": "poc.json"
+  },
+  "encoding": "utf8",
+  "shell": true,
+  "timeout": 2000,
+  "maxBuffer": "1024 * 1024",
+  "killSignal": "SIGTERM"
+}

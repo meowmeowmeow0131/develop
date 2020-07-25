@@ -15,6 +15,7 @@ tap 'homebrew/cask'
 brew 'mas'
 brew 'mackup'
 brew 'mutagen-io/mutagen/mutagen'
+brew 'tempfile'
 brew 'coreutils'
 
 # ------------------------------------
@@ -28,6 +29,8 @@ cask 'cyberduck'
 cask 'clipy'
 cask 'appcleaner'
 cask 'sketch'
+cask 'sourcetree'
+cask 'simplecap'
 
 # ------------------------------------
 # App Store のアプリ
@@ -36,3 +39,4 @@ cask 'sketch'
 mas 'LINE', id: 539883307
 mas 'Trello', id: 1278508951
 mas 'Keynote', id: 409183694
+mas 'Glance – Quick Look Plugin', id: 1513574319

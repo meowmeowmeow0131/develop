@@ -1,0 +1,56 @@
+stack name: demo-dev-ec2-web-server-template
+{
+    "Parameters": [
+        {
+            "ParameterKey": "KeyPairName",
+            "DefaultValue": "key",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "CompanyPrefix",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceName",
+            "DefaultValue": "web",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeSize",
+            "DefaultValue": "8",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceAMI",
+            "DefaultValue": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "SSHAccessSourceIP",
+            "DefaultValue": "0.0.0.0/0",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "PJPrefix",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceInstanceType",
+            "DefaultValue": "t2.micro",
+            "NoEcho": false
+        },
+        {
+            "ParameterKey": "EC2InstanceVolumeType",
+            "DefaultValue": "gp2",
+            "NoEcho": false
+        }
+    ],
+    "Description": "???????EC2????????????????????????????????????????AMI,????????????????????? ??????????Web?????????????",
+    "Capabilities": [
+        "CAPABILITY_NAMED_IAM"
+    ],
+    "CapabilitiesReason": "The following resource(s) require capabilities: [AWS::IAM::Role]"
+}
+
+process exited with code: 0
+task is sucessful.
